@@ -1,0 +1,36 @@
+import {Text, TouchableOpacity, View} from "react-native";
+import React from "react";
+import i18next from "@/services/i18next";
+
+
+interface MenuProps {
+    setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+    const ChangeLanguageMenu: React.FC<MenuProps> = ({setShowMenu}) => {
+    return (
+        <View className="absolute top-20 right-4 w-36 bg-primary rounded-b-xl shadow-md p-2 z-50">
+            <TouchableOpacity className="p-2" onPress={()=> {
+                i18next.changeLanguage('en');
+                setShowMenu(false);
+            }}>
+                <Text>English</Text>
+            </TouchableOpacity>
+            <TouchableOpacity className="p-2" onPress={()=> {
+                i18next.changeLanguage('ko');
+                setShowMenu(false);
+            }}>
+                <Text>Korean</Text>
+            </TouchableOpacity>
+            <TouchableOpacity className="p-2" onPress={() => {
+                i18next.changeLanguage('zh');
+                setShowMenu(false);
+            }}>
+                <Text>Chinese</Text>
+            </TouchableOpacity>
+        </View>
+    )
+}
+
+export default ChangeLanguageMenu;
+

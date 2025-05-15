@@ -7,6 +7,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import {MaterialIcons} from "@expo/vector-icons";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import {Checkbox} from "expo-checkbox";
+import {router} from "expo-router";
 
 const Home = () => {
     const [isChecked, setChecked] = useState(false);
@@ -32,10 +33,10 @@ const Home = () => {
                     </View>
                     <View className="bg-primary w-full rounded-3xl">
                         <View className="my-8 px-8 w-full ">
-                            <Text className="font-extrabold text-4xl">{t('title')}</Text>
+                            <Text className="font-extrabold text-4xl flex-shrink">{t('title')}</Text>
                         </View>
                         <View className="px-8 mb-4 w-full ">
-                            <Text className="font-extrabold text-4xl">{t('subtitle')}</Text>
+                            <Text className="font-extrabold text-4xl flex-shrink">{t('subtitle')}</Text>
                         </View>
                     </View>
                     <View className="flex-row items-center  w-full h-20 my-4 px-4 gap-4 bg-primary rounded-3xl">
@@ -54,12 +55,19 @@ const Home = () => {
                         <FontAwesome name="check-circle" size={24} color="blue" />
                         <Text className="flex-shrink">{t('h-4')}</Text>
                     </View>
+                    <View className="flex-row items-center w-full h-20 mb-4 px-4 gap-4 bg-primary rounded-3xl">
+                        <FontAwesome name="check-circle" size={24} color="blue" />
+                        <Text className="flex-shrink">{t('h-5')}</Text>
+                    </View>
                     <View className="flex-row gap-2">
                         <Checkbox  value={isChecked} onValueChange={setChecked} />
                         <Text>{t('agree')}</Text>
                     </View>
 
-                    <TouchableOpacity className="flex items-center justify-center w-[80%] h-12 my-4  bg-buttonBlue rounded-2xl">
+                    <TouchableOpacity
+                        className="flex items-center justify-center w-[80%] h-12 my-4  bg-buttonBlue rounded-2xl"
+                        onPress={()=> router.push('/checkARC')}
+                    >
                         <Text className="text-white">{t('checkMyBenefit')}</Text>
                     </TouchableOpacity>
                 </View>

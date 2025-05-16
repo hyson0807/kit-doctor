@@ -48,7 +48,10 @@ function Teeth() {
 
             <TouchableOpacity
                 className="flex-row items-center justify-start pl-[5%] gap-5 w-[80%] h-12  bg-buttonBlue rounded-2xl"
-                onPress={()=> router.push('/hospital')}
+                onPress={()=> router.push({
+                    pathname: "/hospital",
+                    params: { type: "치과" }
+                })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>
                 <Text className="text-white">치과 추천받기</Text>
@@ -83,10 +86,13 @@ function Hospital() {
 
             <TouchableOpacity
                 className="flex-row items-center justify-start pl-[5%] gap-5 w-[80%] h-12  bg-buttonBlue rounded-2xl"
-                onPress={()=> router.push('/hospital')}
+                onPress={()=> router.push({
+                    pathname: "/hospital",
+                    params: { type: "병원" }
+                })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
-                <Text className="text-white">치과 추천받기</Text>
+                <Text className="text-white">병원 추천받기</Text>
             </TouchableOpacity>
 
         </View>

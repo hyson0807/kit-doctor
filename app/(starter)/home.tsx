@@ -22,7 +22,7 @@ const Home = () => {
 
                 <View className="flex flex-col items-center w-full h-full sm:w-[640px] bg-background p-4">
                     {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
-                    <View className="flex-row items-center justify-between w-full h-20 mb-2">
+                    <View className="flex-row items-center justify-between w-full  mb-2 ">
                         <Image source={require('../../assets/images/logo.png')}/>
                         <TouchableOpacity className="flex-row items-center justify-between w-36 px-1 h-10 rounded-xl bg-primary" onPress={toggleMenu}>
 

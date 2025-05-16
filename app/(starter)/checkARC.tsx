@@ -87,7 +87,10 @@ const CheckArc = () => {
         return (
                 <TouchableOpacity
                     className="flex items-center justify-center w-[80%] h-12 my-4  bg-buttonBlue rounded-2xl"
-                    onPress={()=> router.push('/myBenefit')}
+                    onPress={()=> router.push({
+                        pathname: '/myBenefit',
+                        params: { year: selectedYear.toString() }
+                    })}
                 >
                     <Text className="text-white">100% 당첨 혜택 보러가기</Text>
                 </TouchableOpacity>

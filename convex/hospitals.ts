@@ -14,3 +14,13 @@ export const getHospitals = query({
 
     }
 })
+
+export const getHospitalById = query({
+    args: {
+        id: v.id("hospitals"),
+    },
+    handler: async (ctx, args) => {
+        const hospital = await ctx.db.get(args.id);
+        return hospital;
+    },
+});

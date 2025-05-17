@@ -38,7 +38,10 @@ const Hospital = () => {
                                 </View>
                                 <TouchableOpacity
                                     className="flex items-center justify-center w-[90%] h-10  bg-buttonBlue rounded-2xl"
-                                    onPress={()=> router.push('/')}
+                                    onPress={()=> router.push({
+                                        pathname: '/last',
+                                        params: { hospital_id: hospital._id }
+                                    })}
                                 >
                                     <Text className="text-white">이미 낸 돈 쓰러 가기</Text>
                                 </TouchableOpacity>

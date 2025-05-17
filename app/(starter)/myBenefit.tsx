@@ -26,10 +26,10 @@ const MyBenefit = () => {
 function Teeth() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
-            <Text className="text-xl">1년에 한번 뿐인 기회에요!</Text>
-            <View className="flex items-center justify-center w-[80%] h-28 bg-white rounded-3xl">
-                <Text className="text-xl">최대 사용가능 보험료</Text>
-                <Text className="text-3xl">85,000원</Text>
+            <Text className="text-2xl font-bold">1년에 한번 뿐인 기회에요!</Text>
+            <View className="flex items-center justify-center w-[80%] h-28 bg-white rounded-3xl gap-2">
+                <Text className="text-2xl">최대 사용가능 보험료</Text>
+                <Text className="text-3xl font-extrabold">85,000원</Text>
             </View>
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-2">
@@ -64,10 +64,10 @@ function Teeth() {
 function Hospital() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
-            <Text className="text-xl">1/2 확률로 당첨되었어요!</Text>
-            <View className="flex items-center justify-center w-[80%] h-28 bg-white rounded-3xl">
-                <Text className="text-xl">최대 사용가능 보험료</Text>
-                <Text className="text-3xl">200,000원</Text>
+            <Text className="text-2xl font-bold">1/2 확률로 당첨되었어요!</Text>
+            <View className="flex items-center justify-center w-[80%] h-28 bg-white rounded-3xl gap-2">
+                <Text className="text-2xl">최대 사용가능 보험료</Text>
+                <Text className="text-3xl font-extrabold">200,000원</Text>
             </View>
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-2">

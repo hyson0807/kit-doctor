@@ -59,10 +59,10 @@ const Home = () => {
                         <FontAwesome name="check-circle" size={24} color="blue" />
                         <Text className="flex-shrink">{t('h-5')}</Text>
                     </View>
-                    <View className="flex-row gap-2">
-                        <Checkbox  value={isChecked} onValueChange={setChecked} />
-                        <Text>{t('agree')}</Text>
-                    </View>
+                    {/*<View className="flex-row gap-2">*/}
+                    {/*    <Checkbox  value={isChecked} onValueChange={setChecked} />*/}
+                    {/*    <Text>{t('agree')}</Text>*/}
+                    {/*</View>*/}
 
                     <TouchableOpacity
                         className="flex items-center justify-center w-[80%] h-12 my-4  bg-buttonBlue rounded-2xl"

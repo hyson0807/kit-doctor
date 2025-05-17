@@ -10,6 +10,7 @@ const CheckArc = () => {
     const [IsBorn, setIsBorn] = useState(false);
     const [switched, setSwitched] = useState(true);
     const [showNext, setShowNext] = useState(false);
+    const [showNo, setShowNo] = useState(false);
 
 
     return (
@@ -19,6 +20,7 @@ const CheckArc = () => {
                         {switched && <Arc/>}
                         {IsBorn && <Born/>}
                         {showNext && <Next/>}
+                        {showNo && <IfNo/>}
                     </View>
                 </View>
 
@@ -33,6 +35,7 @@ const CheckArc = () => {
                 <View className="flex-row items-center justify-around w-full">
                     <TouchableOpacity onPress={() => {
                         setSwitched(false);    // ARC 질문 숨김
+                        setShowNo(false);
                         setIsBorn(true);
                     }}>
                         <View className="bg-buttonBlue w-40 h-14 rounded-3xl p-2 items-center justify-center">
@@ -40,6 +43,7 @@ const CheckArc = () => {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => {
+                        setShowNo(true);
 
 
                     }}>
@@ -94,6 +98,17 @@ const CheckArc = () => {
                 >
                     <Text className="text-white">100% 당첨 혜택 보러가기</Text>
                 </TouchableOpacity>
+        )
+    }
+
+    function IfNo() {
+        return(
+            <View className="flex items-center justify-center  w-full h-40 rounded-3xl gap-4 bg-primary">
+                <View>
+                    <Text className="text-3xl font-extrabold" >ARC 카드가 필요해요</Text>
+                </View>
+
+            </View>
         )
     }
 }

@@ -13,9 +13,14 @@ const MyBenefit = () => {
     return (
         <ScrollView>
         <View className="flex-1 items-center">
-            <View className="flex flex-col items-center  w-full h-screen sm:w-[640px] bg-background p-4 gap-10">
+            <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-4 gap-10">
                 <BackBar/>
-                {selectedYear % 2 === 0 ? <Teeth/> : <Hospital/>}
+                { selectedYear % 2 === 0 ? <Teeth/> : (
+                    <View className="flex-1 w-full items-center gap-5">
+                        <Teeth/>
+                        <Hospital/>
+                    </View>
+                    )}
 
             </View>
         </View>

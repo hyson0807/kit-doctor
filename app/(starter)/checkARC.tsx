@@ -1,5 +1,5 @@
-import {View, Text, ScrollView, TouchableOpacity, TextInput} from 'react-native'
-import React, {useEffect, useState} from 'react'
+import {View, Text, TouchableOpacity} from 'react-native'
+import React, {useState} from 'react'
 import { Picker } from '@react-native-picker/picker';
 import BackBar from "@/components/BackBar";
 import {router} from "expo-router";
@@ -70,6 +70,7 @@ const CheckArc = () => {
                     <Text className="text-3xl font-extrabold " >몇 년도에 태어났나요?</Text>
                 </View>
                 <Picker
+                    mode="dropdown"
                     style={{
                         height: 60, // Increase height for mobile
                         width: '80%', // Ensure it takes full width

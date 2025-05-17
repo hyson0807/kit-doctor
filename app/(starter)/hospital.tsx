@@ -12,7 +12,7 @@ const Hospital = () => {
     return (
         <ScrollView>
             <View className="flex-1 items-center">
-                <View className="flex flex-col items-center w-full h-screen sm:w-[640px] bg-background p-4 ">
+                <View className="flex flex-col items-center w-full h-full sm:w-[640px] bg-background p-4 ">
                     <BackBar/>
                     <Navigation/>
                     {!hospitals ? (
@@ -56,9 +56,9 @@ const Hospital = () => {
 
 function Navigation() {
     return (
-        <View className="flex items-center w-[90%] p-5 rounded-3xl mb-5">
+        <View className="flex items-center w-full p-2 rounded-3xl my-5 ">
             <View className="flex-row gap-3">
-                <Image resizeMode="contain" source={require('../../assets/images/kit.png')} style={{width: 50, height: 50}}/>
+                <Image className="" resizeMode="contain" source={require('../../assets/images/kit.png')} style={{width: 50, height: 50 }}/>
                 <View className="flex-1 gap-3">
                     <Text className="text-3xl font-bold">당신에게 가장 잘 맞는 2곳 골랐어요</Text>
                     <Text className="text-lg">가격, 거리, 리뷰를 모두 고려했어요</Text>

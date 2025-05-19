@@ -21,7 +21,7 @@ const Hospital = () => {
                         hospitals.map((hospital, index) => (
                             <View key={hospital._id}  className="flex items-center mb-5 bg-primary w-[90%] gap-5 p-7 rounded-3xl">
                                 <View className="w-full gap-2">
-                                    <Text className="text-4xl">{hospital.hospital_name}</Text>
+                                    <Text className="text-[40px] font-bold">{hospital.hospital_name}</Text>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/star.png')} style={{width: 20, height: 20}}/>
                                         <Text className="text-2xl">{hospital.rate} / 5.0</Text>
@@ -37,13 +37,13 @@ const Hospital = () => {
                                     </View>
                                 </View>
                                 <TouchableOpacity
-                                    className="flex items-center justify-center w-[90%] h-10  bg-buttonBlue rounded-2xl"
+                                    className="flex items-center justify-center w-full h-10  bg-buttonBlue rounded-2xl"
                                     onPress={()=> router.push({
                                         pathname: '/last',
                                         params: { hospital_id: hospital._id }
                                     })}
                                 >
-                                    <Text className="text-white">이미 낸 돈 쓰러 가기</Text>
+                                    <Text className="text-white text-[20.7px] font-bold">이미 낸 돈 쓰러 가기</Text>
                                 </TouchableOpacity>
                             </View>
                         ))
@@ -60,9 +60,9 @@ function Navigation() {
             <View className="flex-row gap-3">
                 <Image className="" resizeMode="contain" source={require('../../assets/images/kit.png')} style={{width: 50, height: 50 }}/>
                 <View className="flex-1 gap-3">
-                    <Text className="text-3xl font-bold">당신에게 가장 잘 맞는 2곳 골랐어요</Text>
-                    <Text className="text-lg">가격, 거리, 리뷰를 모두 고려했어요</Text>
-                    <Text className="text-sm">평균보다 저렴하고, 학교와 가까우며 만족도가 높은 병원을 우선 추천드려요</Text>
+                    <Text className="text-[28px] font-bold">당신에게 가장 잘 맞는 2곳 골랐어요</Text>
+                    <Text className="text-[18px]">가격, 거리, 리뷰를 모두 고려했어요</Text>
+                    <Text className="text-[14px]">평균보다 저렴하고, 학교와 가까우며 만족도가 높은 병원을 우선 추천드려요</Text>
                 </View>
             </View>
         </View>

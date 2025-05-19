@@ -1,8 +1,10 @@
-import {View, Text, TouchableOpacity} from 'react-native'
+import {View, Text, TouchableOpacity, TextInput} from 'react-native'
 import React, {useState} from 'react'
 import { Picker } from '@react-native-picker/picker';
 import BackBar from "@/components/BackBar";
 import {router} from "expo-router";
+import {t} from "i18next";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 const CheckArc = () => {
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -28,9 +30,9 @@ const CheckArc = () => {
 
     function Arc() {
         return (
-            <View className="flex items-center justify-center  w-full h-40 rounded-3xl gap-4 bg-primary">
+            <View className="flex items-center justify-center  w-full h-[141px] rounded-3xl gap-4 bg-primary">
                 <View>
-                    <Text className="text-3xl font-extrabold" >ARC 카드가 있나요?</Text>
+                    <Text className="text-[26px] font-extrabold" >{t("do you have arc card")}</Text>
                 </View>
                 <View className="flex-row items-center justify-around w-full">
                     <TouchableOpacity onPress={() => {
@@ -39,7 +41,7 @@ const CheckArc = () => {
                         setIsBorn(true);
                     }}>
                         <View className="bg-buttonBlue w-40 h-14 rounded-3xl p-2 items-center justify-center">
-                            <Text className="text-white">예</Text>
+                            <Text className="text-white text-[20.7px] font-bold">{t('yes')}</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => {
@@ -48,7 +50,7 @@ const CheckArc = () => {
 
                     }}>
                         <View className="bg-buttonBlue w-40 h-14 rounded-3xl p-2 items-center justify-center">
-                            <Text className="text-white">아니오</Text>
+                            <Text className="text-white text-[20.7px] font-bold">{t('no')}</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -67,7 +69,7 @@ const CheckArc = () => {
         return (
             <View className="flex items-center  w-full h-80 rounded-3xl gap-4">
                 <View className="mt-8">
-                    <Text className="text-3xl font-extrabold " >몇 년도에 태어났나요?</Text>
+                    <Text className="text-3xl font-extrabold " >{t('select the year you born')}</Text>
                 </View>
                 <Picker
                     mode="dropdown"
@@ -81,7 +83,7 @@ const CheckArc = () => {
                     dropdownIconColor="black"
                 >
                     {years.map((year) => (
-                        <Picker.Item key={year} label={`${year}년`} value={year} />
+                        <Picker.Item key={year} label={`${year}`} value={year} />
                     ))}
                 </Picker>
             </View>
@@ -91,23 +93,33 @@ const CheckArc = () => {
     function Next() {
         return (
                 <TouchableOpacity
-                    className="flex items-center justify-center w-[80%] h-12 my-4  bg-buttonBlue rounded-2xl"
+                    className="flex items-center justify-center w-full h-[60px] my-4  bg-buttonBlue rounded-2xl"
                     onPress={()=> router.push({
                         pathname: '/myBenefit',
                         params: { year: selectedYear.toString() }
                     })}
                 >
-                    <Text className="text-white">100% 당첨 혜택 보러가기</Text>
+                    <Text className="text-white text-[20.7px] font-bold">{t('check my benefit')}</Text>
                 </TouchableOpacity>
         )
     }
 
     function IfNo() {
         return(
-            <View className="flex items-center justify-center  w-full h-40 rounded-3xl gap-4 bg-primary">
-                <View>
-                    <Text className="text-3xl font-extrabold" >ARC 카드가 필요해요</Text>
-                </View>
+            <View className="flex justify-center  w-full  rounded-3xl p-5 pl-12 gap-5 bg-primary ">
+                    <Text className="text-[24px] font-extrabold" >{t('Don\'t worry! leave your number to get benefit alert after you get ARC Card')}</Text>
+                    <View className="flex-row items-center gap-5">
+                    <TextInput
+                        className="w-[241px] h-[44px] bg-white px-4 rounded-lg"
+                        placeholder={t("Phone Number")}
+                        // value={email}
+                        // onChangeText={setEmail}
+                        keyboardType="email-address"
+                        autoCapitalize="none"
+                        placeholderTextColor="#888"
+                    />
+                        <AntDesign name="rightcircle" size={30} color="black" />
+                    </View>
 
             </View>
         )

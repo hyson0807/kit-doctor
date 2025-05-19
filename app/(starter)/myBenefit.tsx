@@ -4,6 +4,7 @@ import BackBar from "@/components/BackBar";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {router} from "expo-router";
 import { useLocalSearchParams } from 'expo-router';
+import {t} from "i18next";
 
 const MyBenefit = () => {
 
@@ -31,23 +32,23 @@ const MyBenefit = () => {
 function Teeth() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
-            <Text className="text-2xl font-bold">1년에 한번 뿐인 기회에요!</Text>
-            <View className="flex items-center justify-center w-[80%] h-28 bg-white rounded-3xl gap-2">
-                <Text className="text-2xl">최대 사용가능 보험료</Text>
-                <Text className="text-3xl font-extrabold">85,000원</Text>
+            <Text className="text-[22px] font-bold">{t('It\'s a once a year chance !')}</Text>
+            <View className="flex items-center justify-center w-full py-4 bg-white rounded-3xl gap-2">
+                <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
+                <Text className="text-[40px] font-bold">85,000원</Text>
             </View>
             <View className="gap-5  w-[80%]">
-                <View className="flex-row items-center gap-2">
-                    <FontAwesome name="check-circle" size={24} color="blue" />
-                    <Text className="flex-shrink">치아 스케일링</Text>
+                <View className="flex-row items-center gap-4">
+                    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
+                    <Text className="flex-shrink text-[18.4px]">{t('Dental scaling')}</Text>
                 </View>
-                <View className="flex-row items-center gap-2">
-                    <FontAwesome name="check-circle" size={24} color="blue" />
-                    <Text className="flex-shrink">치석 제거 / 치아 케어</Text>
+                <View className="flex-row items-center gap-4">
+                    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
+                    <Text className="flex-shrink text-[18.4px]">{t('Tooth care , Dental cleaned')}</Text>
                 </View>
-                <View className="flex-row items-center gap-2">
-                    <FontAwesome name="check-circle" size={24} color="blue" />
-                    <Text className="flex-shrink">선진국 대비, 80% 저렴한 한국 치아 케어</Text>
+                <View className="flex-row items-center gap-4">
+                    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
+                    <Text className="flex-shrink text-[18.4px]">{t('Pay 20%, get 100% of the care-only in')}</Text>
                 </View>
             </View>
 
@@ -59,7 +60,7 @@ function Teeth() {
                 })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>
-                <Text className="text-white">치과 추천받기</Text>
+                <Text className="text-white text-[20.7px] font-bold">{t('Recommend a Dentist')}</Text>
             </TouchableOpacity>
 
         </View>
@@ -69,23 +70,23 @@ function Teeth() {
 function Hospital() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
-            <Text className="text-2xl font-bold">1/2 확률로 당첨되었어요!</Text>
-            <View className="flex items-center justify-center w-[80%] h-28 bg-white rounded-3xl gap-2">
-                <Text className="text-2xl">최대 사용가능 보험료</Text>
-                <Text className="text-3xl font-extrabold">200,000원</Text>
+            <Text className="text-[22px] font-bold">{t('You won 50% chance!')}</Text>
+            <View className="flex items-center justify-center w-full py-4 bg-white rounded-3xl gap-2">
+                <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
+                <Text className="text-[40px] font-bold">200,000원</Text>
             </View>
             <View className="gap-5  w-[80%]">
-                <View className="flex-row items-center gap-2">
-                    <FontAwesome name="check-circle" size={24} color="blue" />
-                    <Text className="flex-shrink">당신은 무료 대상자에요!</Text>
+                <View className="flex-row items-center gap-4">
+                    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
+                    <Text className="flex-shrink text-[18.4px]">당신은 무료 대상자에요!</Text>
                 </View>
-                <View className="flex-row items-center gap-2">
-                    <FontAwesome name="check-circle" size={24} color="blue" />
-                    <Text className="flex-shrink">지금 놓치면 2년 후에</Text>
+                <View className="flex-row items-center gap-4">
+                    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
+                    <Text className="flex-shrink text-[18.4px]">지금 놓치면 2년 후에</Text>
                 </View>
-                <View className="flex-row items-center gap-2">
-                    <FontAwesome name="check-circle" size={24} color="blue" />
-                    <Text className="flex-shrink">한국생활의 혜택, 무료 건강 체크</Text>
+                <View className="flex-row items-center gap-4">
+                    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
+                    <Text className="flex-shrink text-[18.4px]">한국생활의 혜택, 무료 건강 체크</Text>
                 </View>
             </View>
 
@@ -97,7 +98,7 @@ function Hospital() {
                 })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
-                <Text className="text-white">병원 추천받기</Text>
+                <Text className="text-white text-[20.7px] font-bold">병원 추천받기</Text>
             </TouchableOpacity>
 
         </View>

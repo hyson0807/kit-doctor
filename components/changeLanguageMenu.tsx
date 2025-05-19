@@ -9,7 +9,7 @@ interface MenuProps {
 
     const ChangeLanguageMenu: React.FC<MenuProps> = ({setShowMenu}) => {
     return (
-        <View className="absolute top-20 right-4 w-36 bg-primary rounded-b-xl shadow-md p-2 z-50">
+        <View className="w-36 bg-primary rounded-xl shadow-md p-1 z-50">
             <TouchableOpacity className="p-2" onPress={()=> {
                 i18next.changeLanguage('en');
                 setShowMenu(false);

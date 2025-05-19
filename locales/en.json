@@ -1,14 +1,14 @@
 {
-  "language": "ENG",
+  "language": "English",
   "International students paid" : "International students paid",
   "431,520" : "₩431,520",
   "for health insurance every 6 months" : "for health insurance \nevery 6 months",
   "title1": "International students paid\n₩431,520 \nfor health insurance \nevery 6 months",
   "subtitle": "You can use \nthe money \nalready paid\neven if you are not sick!",
-  "h-1": "200,000 won service -> 0 won\nHalf of the foreigners can use it",
+  "h-1": "₩200,000 service -> ₩0\nHalf of the foreigners can use it",
   "h-2": "You just click it\nWe'll do Booking & Explain for you",
-  "h-3": "You only use your language",
-  "h-4": "We'll recommend\nthe best hospital for you",
+  "h-3": "No Korean\nYou only use your language",
+  "h-4": "Recommend\nthe best hospital for you",
   "h-5": "If you leave,\nThe money you paid just disappear",
   "change-language" : " Change language",
   "welcome": "Welcome to my app",
@@ -25,15 +25,29 @@
   "Max benefit you can use" : "Max benefit you can use",
   "Dental scaling" : "Dental scaling",
   "Tooth care , Dental cleaned" : "Tooth care , Dental cleaned",
-  "Pay 20%, get 100% of the care-only in" : "Pay 20%, get 100% of the care-only in",
+  "Pay 20%, get 100% of the care-only in" : "Just 20%, Full care\n-only in KOREA",
   "Korea" : "Korea",
   "Recommend a Dentist": "Recommend a Dentist",
   "You won 50% chance!": "You won 50% chance!",
   "You can do Free Health Check-up" : "You can do Free Health Check-up",
   "Miss it now, Wait 2 years." : "Miss it now, Wait 2 years.",
-  "Benefit of Korea Life," : "Benefit of Korea Life,",
+  "Benefit of Korea Life," : "Benefit of Korea Life,\nFree Health Check-up",
   "FREE health check-up" : "FREE health check-up",
-  "Recommend a Clinic" : "Recommend a Clinic"
+  "Recommend a Clinic" : "Recommend a Clinic",
+  "We picked the 2 Best clinics for you" : "We picked the 2 Best clinics for you",
+  "We considered price, distance, and reviews." : "We considered price, distance, and reviews.",
+  "Clinics are recommended based on distance from school, and high satisfaction ratings." : "Clinics are recommended based on distance from school, and high satisfaction ratings.",
+  "Use What You Already Paid" : "Use Money Already Paid",
+  "Insurance Benefits You almost missed" : "Insurance Benefits\nYou almost missed",
+  "Final step!" : "Final step!",
+  "WelKit will take care of it all for you." : "WelKit will take care of it all for you.",
+  "Your chosen clinic" : "Your chosen clinic",
+  "If price is different, Welkit will connect hospital for you" : "If price is different, Welkit will connect hospital for you",
+  "We’ll handle the booking, instructions, and guide for you." : "We’ll handle the booking, instructions, and guide for you.",
+  "No Korean — just show the WelKit screen to clinic." : "No Korean — just show the WelKit screen to clinic.",
+  "Get All Benefits" : "Get All Benefits"
+
+
 
 
 }

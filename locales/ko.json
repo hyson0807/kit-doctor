@@ -1,5 +1,5 @@
 {
-  "language": "Language",
+  "language": "한국어",
   "International students paid" : "유학생은 6개월간",
   "for health insurance every 6 months" : "건강보험료를 내야합니다",
   "431,520" : "₩431,520",
@@ -28,9 +28,21 @@
   "Korea" : "Korea",
   "Recommend a Dentist": "치과 추천받기",
   "You won 50% chance!": "1/2 확률로 당첨되었어요!",
-  "You can do Free Health Check-up" : "You can do Free Health Check-up",
-  "Miss it now, Wait 2 years." : "Miss it now, Wait 2 years.",
-  "Benefit of Korea Life," : "Benefit of Korea Life,",
+  "You can do Free Health Check-up" : "당신은 무료 대상자에요!",
+  "Miss it now, Wait 2 years." : "지금 놓치면 2년 후에",
+  "Benefit of Korea Life," : "한국생활의 혜택, 무료 건강 체크",
   "FREE health check-up" : "FREE health check-up",
-  "Recommend a Clinic" : "Recommend a Clinic"
+  "Recommend a Clinic" : "병원 추천받기",
+  "We picked the 2 Best clinics for you" : "당신에게 가장 잘 맞는 2곳 골랐어요",
+  "We considered price, distance, and reviews." : "가격, 거리, 리뷰를 모두 고려했어요",
+  "Clinics are recommended based on distance from school, and high satisfaction ratings." : "평균보다 저렴하고, 학교와 가까우며 만족도가 높은 병원을 우선 추천드려요",
+  "Use What You Already Paid" : "이미 낸 돈 쓰러 가기",
+  "Insurance Benefits You almost missed" : "당신이 놓칠 뻔 한 보험료",
+  "Final step!" : "이제 마지막이에요!",
+  "WelKit will take care of it all for you." : "Kit가 다 대신 해줄게요",
+  "Your chosen clinic" : "너가 선택한 병원은 10만원에서 2만원",
+  "If price is different, Welkit will connect hospital for you" : "가격 다르면, Kit가 병원에 대신 확인해줄께요",
+  "We’ll handle the booking, instructions, and guide for you." : "예약&설명&가이드 대신 해줄께요",
+  "No Korean — just show the WelKit screen to clinic." : "한국말 없이, 너는 Kit화면만 보여주면 되요",
+  "Get All Benefits" : "모든 서비스 받기"
 }

@@ -34,9 +34,9 @@ const Home = () => {
                         <View className="px-8 mb-4 w-full ">
                             <Text className="font-bold text-3xl flex-shrink">{t('subtitle')}</Text>
                         </View>
-                        <TouchableOpacity className="flex-row items-center justify-around w-[186px] px-1 h-[49px] rounded-xl bg-[#CCCCCC] mb-5" onPress={toggleMenu}>
+                        <TouchableOpacity className="flex-row items-center justify-center w-[186px] px-1 h-[49px] rounded-xl bg-[#CCCCCC] mb-5" onPress={toggleMenu}>
                             <Text className="text-center text-2xl font-bold pl-4">{t('language')}</Text>
-                            <AntDesign name="right" size={20} color="black" />
+                            <AntDesign name="right" size={20} color="black" className="ml-10" />
                         </TouchableOpacity>
                         {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
 

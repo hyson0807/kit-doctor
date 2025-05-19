@@ -5,6 +5,7 @@ import {router, useLocalSearchParams} from "expo-router";
 import {useQuery} from "convex/react";
 import {api} from "@/convex/_generated/api";
 import {Id} from "@/convex/_generated/dataModel";
+import {t} from "i18next";
 
 const Last = () => {
 
@@ -22,42 +23,42 @@ const Last = () => {
                 <BackBar />
                 <View className="flex items-center w-[90%] p-2 gap-5">
                     <View className="flex w-full items-center bg-primary gap-2 p-6 rounded-3xl">
-                        <Text className="text-[25px] font-bold flex-shrink">당신이 놓칠 뻔 한 보험료</Text>
-                        {!hospital || hospital.price === undefined ? (<ActivityIndicator size="large" color="#3B82F6" />) : (<Text className="text-[40px] font-bold ">{100000 - parseInt(hospital.price)}원</Text>)}
+                        <Text className="text-[25px] font-bold flex-shrink">{t('Insurance Benefits You almost missed')}</Text>
+                        {!hospital || hospital.price === undefined ? (<ActivityIndicator size="large" color="#3B82F6" />) : (<Text className="text-[40px] font-bold ">₩{100000 - parseInt(hospital.price)}</Text>)}
                     </View>
                     <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl">
 
                         <View className="w-full">
-                            <Text className="text-[22px] font-bold">이제 마지막이에요!</Text>
-                            <Text className="text-[22px] font-bold">Kit가 다 대신 해줄게요</Text>
+                            <Text className="text-[23px] font-bold">{t('Final step!')}</Text>
+                            <Text className="text-[23px] font-bold">{t('WelKit will take care of it all for you.')}</Text>
                         </View>
                         <View className="flex-row w-full gap-4 items-center">
                             <Image resizeMode="contain" source={require('../../assets/images/checkbox.png')} style={{width: 20, height: 20}}/>
-                            <Text className=" text-xl flex-shrink">너가 선택한 병원은 10만원에서 2만원</Text>
+                            <Text className=" text-[18.4px] flex-shrink">{t('Your chosen clinic')}</Text>
                         </View>
                         <View className="flex-row w-full gap-4 items-center">
                             <Image resizeMode="contain" source={require('../../assets/images/checkbox.png')} style={{width: 20, height: 20}}/>
-                                <Text className=" text-xl flex-shrink">가격 다르면, Kit가 병원에 대신 확인해줄께요</Text>
+                                <Text className=" text-[18.4px] flex-shrink">{t('If price is different, Welkit will connect hospital for you')}</Text>
                         </View>
                         <View className="flex-row w-full gap-4 items-center">
                             <Image resizeMode="contain" source={require('../../assets/images/checkbox.png')} style={{width: 20, height: 20}}/>
-                            <Text className=" text-xl flex-shrink">예약&설명&가이드 대신 해줄께요</Text>
+                            <Text className=" text-[18.4px] flex-shrink">{t('We’ll handle the booking, instructions, and guide for you.')}</Text>
                         </View>
                         <View className="flex-row w-full gap-4 items-center mb-10">
                             <Image resizeMode="contain" source={require('../../assets/images/checkbox.png')} style={{width: 20, height: 20}}/>
-                            <Text className=" text-xl flex-shrink">한국말 없이, 너는 Kit화면만 보여주면 되요</Text>
+                            <Text className=" text-[18.4px] flex-shrink">{t('No Korean — just show the WelKit screen to clinic.')}</Text>
                         </View>
 
                         <View className="flex items-center justify-center w-full gap-3">
                             <View className="flex-row">
-                            <Text className="line-through font-bold ">1500원</Text>
-                            <Text className="font-bold "> - 500원</Text>
+                            <Text className="line-through font-bold ">₩1500</Text>
+                            <Text className="font-bold "> - ₩500</Text>
                             </View>
                             <TouchableOpacity
                                 className="flex items-center justify-center pl-[5%] gap-5 w-full h-12  bg-buttonBlue rounded-2xl"
                                 onPress={()=> router.push('/')}
                             >
-                                <Text className="text-white font-bold text-[20.7px]">모든 서비스 받기</Text>
+                                <Text className="text-white font-bold text-[20.7px]">{t('Get All Benefits')}</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

@@ -35,7 +35,7 @@ function Teeth() {
             <Text className="text-[22px] font-bold">{t('It\'s a once a year chance !')}</Text>
             <View className="flex items-center justify-center w-full py-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
-                <Text className="text-[40px] font-bold">85,000원</Text>
+                <Text className="text-[40px] font-bold">85,000₩</Text>
             </View>
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-4">
@@ -53,7 +53,7 @@ function Teeth() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-[80%] h-12  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-start pl-[5%] gap-5 w-full h-12  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "치과" }
@@ -73,32 +73,32 @@ function Hospital() {
             <Text className="text-[22px] font-bold">{t('You won 50% chance!')}</Text>
             <View className="flex items-center justify-center w-full py-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
-                <Text className="text-[40px] font-bold">200,000원</Text>
+                <Text className="text-[40px] font-bold">200,000₩</Text>
             </View>
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">당신은 무료 대상자에요!</Text>
+                    <Text className="flex-shrink text-[18.4px]">{t('You can do Free Health Check-up')}</Text>
                 </View>
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">지금 놓치면 2년 후에</Text>
+                    <Text className="flex-shrink text-[18.4px]">{t('Miss it now, Wait 2 years.')}</Text>
                 </View>
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">한국생활의 혜택, 무료 건강 체크</Text>
+                    <Text className="flex-shrink text-[18.4px]">{t('Benefit of Korea Life,')}</Text>
                 </View>
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-[80%] h-12  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-start pl-[5%] gap-5 w-full h-12  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "병원" }
                 })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
-                <Text className="text-white text-[20.7px] font-bold">병원 추천받기</Text>
+                <Text className="text-white text-[20.7px] font-bold">{t('Recommend a Clinic')}</Text>
             </TouchableOpacity>
 
         </View>

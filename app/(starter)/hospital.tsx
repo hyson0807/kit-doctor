@@ -4,6 +4,7 @@ import BackBar from "@/components/BackBar";
 import {router, useLocalSearchParams} from "expo-router";
 import {useQuery} from "convex/react";
 import {api} from "@/convex/_generated/api";
+import {t} from "i18next";
 
 const Hospital = () => {
     const { type } = useLocalSearchParams<{ type : string }>();
@@ -37,13 +38,13 @@ const Hospital = () => {
                                     </View>
                                 </View>
                                 <TouchableOpacity
-                                    className="flex items-center justify-center w-full h-10  bg-buttonBlue rounded-2xl"
+                                    className="flex items-center justify-center w-full py-3  bg-buttonBlue rounded-2xl"
                                     onPress={()=> router.push({
                                         pathname: '/last',
                                         params: { hospital_id: hospital._id }
                                     })}
                                 >
-                                    <Text className="text-white text-[20.7px] font-bold">이미 낸 돈 쓰러 가기</Text>
+                                    <Text className="text-white text-[20.7px] font-bold">{t('Use What You Already Paid')}</Text>
                                 </TouchableOpacity>
                             </View>
                         ))
@@ -60,9 +61,9 @@ function Navigation() {
             <View className="flex-row gap-3">
                 <Image className="" resizeMode="contain" source={require('../../assets/images/kit.png')} style={{width: 50, height: 50 }}/>
                 <View className="flex-1 gap-3">
-                    <Text className="text-[28px] font-bold">당신에게 가장 잘 맞는 2곳 골랐어요</Text>
-                    <Text className="text-[18px]">가격, 거리, 리뷰를 모두 고려했어요</Text>
-                    <Text className="text-[14px]">평균보다 저렴하고, 학교와 가까우며 만족도가 높은 병원을 우선 추천드려요</Text>
+                    <Text className="text-[28px] font-bold">{t('We picked the 2 Best clinics for you')}</Text>
+                    <Text className="text-[18px]">{t('We considered price, distance, and reviews.')}</Text>
+                    <Text className="text-[14px]">{t('Clinics are recommended based on distance from school, and high satisfaction ratings.')}</Text>
                 </View>
             </View>
         </View>

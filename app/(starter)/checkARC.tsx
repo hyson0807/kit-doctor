@@ -30,7 +30,7 @@ const CheckArc = () => {
 
     function Arc() {
         return (
-            <View className="flex items-center justify-center  w-full h-[141px] rounded-3xl gap-4 bg-primary">
+            <View className="flex items-center justify-center  w-full p-3 rounded-3xl gap-4 bg-primary">
                 <View>
                     <Text className="text-[26px] font-extrabold" >{t("do you have arc card")}</Text>
                 </View>

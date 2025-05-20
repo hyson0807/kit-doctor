@@ -4,9 +4,7 @@ import i18next from "@/services/i18next";
 import { useTranslation } from 'react-i18next';
 import ChangeLanguageMenu from "@/components/changeLanguageMenu";
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import {MaterialIcons} from "@expo/vector-icons";
 import AntDesign from '@expo/vector-icons/AntDesign';
-import {Checkbox} from "expo-checkbox";
 import {router} from "expo-router";
 
 const Home = () => {
@@ -68,10 +66,10 @@ const Home = () => {
                     {/*</View>*/}
 
                     <TouchableOpacity
-                        className="flex items-center justify-center w-full h-[58px] my-4  bg-buttonBlue rounded-2xl"
+                        className="flex items-center justify-center w-full p-3 my-4 bg-buttonBlue rounded-2xl"
                         onPress={()=> router.push('/checkARC')}
                     >
-                        <Text className="text-white text-[20.7px] font-bold">{t('checkMyBenefit')}</Text>
+                        <Text className="text-white text-center text-[20.7px] font-bold flex-shrink">{t('checkMyBenefit')}</Text>
                     </TouchableOpacity>
                 </View>
 

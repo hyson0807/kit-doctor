@@ -33,9 +33,9 @@ function Teeth() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
             <Text className="text-[22px] font-bold">{t('It\'s a once a year chance !')}</Text>
-            <View className="flex items-center justify-center w-full py-4 bg-white rounded-3xl gap-2">
+            <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
-                <Text className="text-[40px] font-bold">85,000₩</Text>
+                <Text className="text-[40px] font-bold">₩85,000</Text>
             </View>
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-4">
@@ -53,14 +53,14 @@ function Teeth() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-full h-12  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-2  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "치과" }
                 })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>
-                <Text className="text-white text-[20.7px] font-bold">{t('Recommend a Dentist')}</Text>
+                <Text className="text-white text-[20.7px] font-bold flex-shrink ">{t('Recommend a Dentist')}</Text>
             </TouchableOpacity>
 
         </View>
@@ -71,9 +71,9 @@ function Hospital() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
             <Text className="text-[22px] font-bold">{t('You won 50% chance!')}</Text>
-            <View className="flex items-center justify-center w-full py-4 bg-white rounded-3xl gap-2">
+            <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
-                <Text className="text-[40px] font-bold">200,000₩</Text>
+                <Text className="text-[40px] font-bold">₩200,000</Text>
             </View>
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-4">
@@ -91,14 +91,14 @@ function Hospital() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-full h-12  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-2  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "병원" }
                 })}
             >
                 <Image resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
-                <Text className="text-white text-[20.7px] font-bold">{t('Recommend a Clinic')}</Text>
+                <Text className="text-white text-[20.7px] font-bold flex-shrink">{t('Recommend a Clinic')}</Text>
             </TouchableOpacity>
 
         </View>

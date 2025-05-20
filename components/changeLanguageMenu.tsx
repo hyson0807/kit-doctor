@@ -23,10 +23,17 @@ interface MenuProps {
                 <Text>Korean</Text>
             </TouchableOpacity>
             <TouchableOpacity className="p-2" onPress={() => {
-                i18next.changeLanguage('zh');
+                i18next.changeLanguage('ch');
                 setShowMenu(false);
             }}>
                 <Text>Chinese</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity className="p-2" onPress={() => {
+                i18next.changeLanguage('vt');
+                setShowMenu(false);
+            }}>
+                <Text>vietnam</Text>
             </TouchableOpacity>
         </View>
     )

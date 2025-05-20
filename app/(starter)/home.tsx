@@ -1,14 +1,13 @@
-import {View, TouchableOpacity, ScrollView, Image} from 'react-native'
-import Text from '@/components/Text';
+import {View,Text, TouchableOpacity, ScrollView, Image} from 'react-native'
 import React, {useState} from 'react'
-// import i18next from "@/services/i18next";
+import i18next from "@/services/i18next";
 import { useTranslation } from 'react-i18next';
 import ChangeLanguageMenu from "@/components/changeLanguageMenu";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import {router} from "expo-router";
 
 const Home = () => {
-    // const [isChecked, setChecked] = useState(false);
+    const [isChecked, setChecked] = useState(false);
     const { t } = useTranslation();
     const [showMenu, setShowMenu] = useState(false);
     const toggleMenu = () => {
@@ -42,24 +41,24 @@ const Home = () => {
                     </View>
                     <View className="flex-row items-center  w-full my-4 p-4 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px]">{t('h-1')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-1')}</Text>
 
                     </View>
                     <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px]">{t('h-2')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-2')}</Text>
                     </View>
                     <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px]">{t('h-3')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-3')}</Text>
                     </View>
                     <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px]">{t('h-4')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-4')}</Text>
                     </View>
                     <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px]">{t('h-5')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-5')}</Text>
                     </View>
                     {/*<View className="flex-row gap-2">*/}
                     {/*    <Checkbox  value={isChecked} onValueChange={setChecked} />*/}

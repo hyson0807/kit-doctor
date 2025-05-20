@@ -4,11 +4,11 @@ module.exports = {
   presets: [require("nativewind/preset")],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter-Italic', 'sans-serif'], // 폴백 폰트 추가
-        inter123: ['Inter-SemiBold', 'sans-serif'],
-        italic: ['Inter-Italic', 'sans-serif'],
-      },
+      // fontFamily: {
+      //   sans: ['Inter-Semibold', 'sans-serif'], // 폴백 폰트 추가
+      //   inter123: ['Inter-SemiBold', 'sans-serif'],
+      //   italic: ['Inter-Italic', 'sans-serif'],
+      // },
       colors: {
         background: "#FFFFFF",
         primary: "#E4E4E4",

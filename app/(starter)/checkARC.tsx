@@ -5,6 +5,8 @@ import BackBar from "@/components/BackBar";
 import {router} from "expo-router";
 import {t} from "i18next";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import {useMutation} from "convex/react";
+import {api} from "@/convex/_generated/api";
 
 const CheckArc = () => {
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -17,7 +19,7 @@ const CheckArc = () => {
 
     return (
                 <View className="flex-1 items-center">
-                    <View className="flex flex-col items-center  w-full h-screen sm:w-[640px] bg-background p-4 gap-10">
+                    <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-4 gap-10">
                         <BackBar />
                         {switched && <Arc/>}
                         {IsBorn && <Born/>}
@@ -30,7 +32,7 @@ const CheckArc = () => {
 
     function Arc() {
         return (
-            <View className="flex items-center justify-center  w-full p-4 rounded-3xl gap-4 bg-primary">
+            <View className="flex items-center justify-center  w-full p-6 rounded-3xl gap-4 bg-primary">
                 <View>
                     <Text className="text-[26px] font-extrabold" >{t("do you have arc card")}</Text>
                 </View>
@@ -105,6 +107,26 @@ const CheckArc = () => {
     }
 
     function IfNo() {
+        const getNumber = useMutation(api.users.getNumber);
+        const [number, setNumber] = useState('');
+
+        const sendNumber = async () => {
+            if(!number || number.trim() === "") {
+                alert("please enter your number!");
+                return;
+            }
+
+            try {
+                await getNumber({number : number});
+                alert("number sent successfully!");
+                setNumber('');
+
+            } catch (e: any) {
+                console.log(e);
+                alert(e.message || "An unexpected error occurred. Please try again later.");
+            }
+
+        }
         return(
             <View className="flex justify-center  w-full  rounded-3xl p-5 pl-12 gap-5 bg-primary ">
                     <Text className="text-[24px] font-extrabold" >{t('Don\'t worry! leave your number to get benefit alert after you get ARC Card')}</Text>
@@ -112,13 +134,15 @@ const CheckArc = () => {
                     <TextInput
                         className="w-[241px] h-[44px] bg-white px-4 rounded-lg"
                         placeholder={t("Phone Number")}
-                        // value={email}
-                        // onChangeText={setEmail}
+                        value={number}
+                        onChangeText={setNumber}
                         keyboardType="email-address"
                         autoCapitalize="none"
                         placeholderTextColor="#888"
                     />
-                        <AntDesign name="rightcircle" size={30} color="black" />
+                        <TouchableOpacity onPress={sendNumber}>
+                            <AntDesign name="rightcircle" size={30} color="black" />
+                        </TouchableOpacity>
                     </View>
 
             </View>

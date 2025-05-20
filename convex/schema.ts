@@ -12,4 +12,9 @@ export default defineSchema({
         price: v.string(),
         distance: v.string(),
     }).index("type", ["type"]),
+
+    emails: defineTable({
+        number: v.string(),
+    }),
 });
+

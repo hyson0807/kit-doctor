@@ -16,7 +16,7 @@ const MyBenefit = () => {
             <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-4 gap-10">
                 <BackBar/>
                 { selectedYear % 2 === 0 ? <Teeth/> : (
-                    <View className="flex-1 w-full items-center gap-5">
+                    <View className="flex-1 w-full items-center gap-5 pb-10">
                         <Teeth/>
                         <Hospital/>
                     </View>
@@ -30,7 +30,7 @@ const MyBenefit = () => {
 
 function Teeth() {
     return (
-        <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
+        <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl ">
             <Text className="text-[22px] font-bold">{t('It\'s a once a year chance !')}</Text>
             <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>

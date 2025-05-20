@@ -1,14 +1,14 @@
 import {View, TouchableOpacity, ScrollView, Image} from 'react-native'
 import Text from '@/components/Text';
 import React, {useState} from 'react'
-import i18next from "@/services/i18next";
+// import i18next from "@/services/i18next";
 import { useTranslation } from 'react-i18next';
 import ChangeLanguageMenu from "@/components/changeLanguageMenu";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import {router} from "expo-router";
 
 const Home = () => {
-    const [isChecked, setChecked] = useState(false);
+    // const [isChecked, setChecked] = useState(false);
     const { t } = useTranslation();
     const [showMenu, setShowMenu] = useState(false);
     const toggleMenu = () => {

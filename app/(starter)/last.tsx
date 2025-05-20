@@ -55,10 +55,10 @@ const Last = () => {
                             <Text className="font-bold "> - ₩500</Text>
                             </View>
                             <TouchableOpacity
-                                className="flex items-center justify-center pl-[5%] gap-5 w-full h-12  bg-buttonBlue rounded-2xl"
+                                className="flex items-center justify-center w-full p-3  bg-buttonBlue rounded-2xl"
                                 onPress={()=> router.push('/')}
                             >
-                                <Text className="text-white font-bold text-[20.7px]">{t('Get All Benefits')}</Text>
+                                <Text className="text-white font-bold text-[20.7px] flex-shrink text-center">{t('Get All Benefits')}</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

@@ -44,7 +44,7 @@ const Hospital = () => {
                                         params: { hospital_id: hospital._id }
                                     })}
                                 >
-                                    <Text className="text-white text-[20.7px] font-bold">{t('Use What You Already Paid')}</Text>
+                                    <Text className="text-white text-[20.7px] font-bold text-center">{t('Use What You Already Paid')}</Text>
                                 </TouchableOpacity>
                             </View>
                         ))

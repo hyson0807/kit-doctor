@@ -30,7 +30,7 @@ const CheckArc = () => {
 
     function Arc() {
         return (
-            <View className="flex items-center justify-center  w-full p-3 rounded-3xl gap-4 bg-primary">
+            <View className="flex items-center justify-center  w-full p-4 rounded-3xl gap-4 bg-primary">
                 <View>
                     <Text className="text-[26px] font-extrabold" >{t("do you have arc card")}</Text>
                 </View>
@@ -67,7 +67,7 @@ const CheckArc = () => {
         };
 
         return (
-            <View className="flex items-center  w-full h-80 rounded-3xl gap-4">
+            <View className="flex items-center justify-center w-full p-4 rounded-3xl gap-4">
                 <View className="mt-8">
                     <Text className="text-3xl font-extrabold " >{t('select the year you born')}</Text>
                 </View>
@@ -93,13 +93,13 @@ const CheckArc = () => {
     function Next() {
         return (
                 <TouchableOpacity
-                    className="flex items-center justify-center w-full h-[60px] my-4  bg-buttonBlue rounded-2xl"
+                    className="flex items-center justify-center w-[80%] mt-40 p-4 my-4  bg-buttonBlue rounded-2xl"
                     onPress={()=> router.push({
                         pathname: '/myBenefit',
                         params: { year: selectedYear.toString() }
                     })}
                 >
-                    <Text className="text-white text-[20.7px] font-bold">{t('check my benefit')}</Text>
+                    <Text className="text-white text-[20.7px] font-bold text-center">{t('check my benefit')}</Text>
                 </TouchableOpacity>
         )
     }

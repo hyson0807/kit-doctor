@@ -33,7 +33,7 @@ interface MenuProps {
                 i18next.changeLanguage('vt');
                 setShowMenu(false);
             }}>
-                <Text>vietnam</Text>
+                <Text>Vietnam</Text>
             </TouchableOpacity>
         </View>
     )

@@ -1,7 +1,6 @@
 import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native'
 import React from 'react'
 import BackBar from "@/components/BackBar";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import {router} from "expo-router";
 import { useLocalSearchParams } from 'expo-router';
 import {t} from "i18next";
@@ -53,7 +52,7 @@ function Teeth() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-2  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-3  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "치과" }
@@ -91,7 +90,7 @@ function Hospital() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-2  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-3  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "병원" }

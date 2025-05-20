@@ -23,7 +23,7 @@ const Home = () => {
                         <Image source={require('../../assets/images/logo.png')}/>
 
                     </View>
-                    <View className="bg-primary w-full rounded-3xl flex items-center">
+                    <View className="bg-primary w-full rounded-3xl flex items-center pb-5">
                         <View className="my-8 px-8 w-full ">
                             <Text className="font-bold text-4xl flex-shrink">{t('International students paid')}</Text>
                                 <Text className="font-bold text-[40px] flex-shrink">{t('431,520')}</Text>
@@ -32,32 +32,32 @@ const Home = () => {
                         <View className="px-8 mb-4 w-full ">
                             <Text className="font-bold text-3xl flex-shrink">{t('subtitle')}</Text>
                         </View>
-                        <TouchableOpacity className="flex-row items-center justify-center w-[186px] px-1 h-[49px] rounded-xl bg-[#CCCCCC] mb-5" onPress={toggleMenu}>
+                        <TouchableOpacity className="flex-row items-center justify-center  px-4 py-3 rounded-xl bg-[#CCCCCC]" onPress={toggleMenu}>
                             <Text className="text-center text-2xl font-bold pl-4">{t('language')}</Text>
                             <AntDesign name="right" size={20} color="black" className="ml-10" />
                         </TouchableOpacity>
                         {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
 
                     </View>
-                    <View className="flex-row items-center  w-full h-20 my-4 px-4 gap-4 bg-primary rounded-3xl">
-                        <FontAwesome name="check-circle" size={24} color="blue" />
+                    <View className="flex-row items-center  w-full my-4 p-4 gap-4 bg-primary rounded-3xl">
+                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <Text className="flex-shrink text-[18.4px]">{t('h-1')}</Text>
 
                     </View>
-                    <View className="flex-row items-center w-full h-20 mb-4 px-4 gap-4 bg-primary rounded-3xl">
-                        <FontAwesome name="check-circle" size={24} color="blue" />
+                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <Text className="flex-shrink text-[18.4px]">{t('h-2')}</Text>
                     </View>
-                    <View className="flex-row items-center w-full h-20 mb-4 px-4 gap-4 bg-primary rounded-3xl">
-                        <FontAwesome name="check-circle" size={24} color="blue" />
+                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <Text className="flex-shrink text-[18.4px]">{t('h-3')}</Text>
                     </View>
-                    <View className="flex-row items-center w-full h-20 mb-4 px-4 gap-4 bg-primary rounded-3xl">
-                        <FontAwesome name="check-circle" size={24} color="blue" />
+                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <Text className="flex-shrink text-[18.4px]">{t('h-4')}</Text>
                     </View>
-                    <View className="flex-row items-center w-full h-20 mb-4 px-4 gap-4 bg-primary rounded-3xl">
-                        <FontAwesome name="check-circle" size={24} color="blue" />
+                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <Text className="flex-shrink text-[18.4px]">{t('h-5')}</Text>
                     </View>
                     {/*<View className="flex-row gap-2">*/}

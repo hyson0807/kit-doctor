@@ -23,8 +23,8 @@ const CheckArc = () => {
                         <BackBar />
                         {switched && <Arc/>}
                         {IsBorn && <Born/>}
-                        {showNext && <Next/>}
                         {showNo && <IfNo/>}
+                        {showNext && <Next/>}
                     </View>
                 </View>
 
@@ -42,7 +42,7 @@ const CheckArc = () => {
                         setShowNo(false);
                         setIsBorn(true);
                     }}>
-                        <View className="bg-buttonBlue w-40 h-14 rounded-3xl p-2 items-center justify-center">
+                        <View className="bg-buttonBlue w-[147px] h-[49px] rounded-3xl p-2 items-center justify-center">
                             <Text className="text-white text-[20.7px] font-bold">{t('yes')}</Text>
                         </View>
                     </TouchableOpacity>
@@ -51,7 +51,7 @@ const CheckArc = () => {
 
 
                     }}>
-                        <View className="bg-buttonBlue w-40 h-14 rounded-3xl p-2 items-center justify-center">
+                        <View className="bg-buttonBlue w-[147px] h-[49px] rounded-3xl p-2 items-center justify-center">
                             <Text className="text-white text-[20.7px] font-bold">{t('no')}</Text>
                         </View>
                     </TouchableOpacity>
@@ -69,16 +69,19 @@ const CheckArc = () => {
         };
 
         return (
-            <View className="flex items-center justify-center w-full p-4 rounded-3xl gap-4">
-                <View className="mt-8">
-                    <Text className="text-3xl font-extrabold " >{t('select the year you born')}</Text>
+            <View className="flex items-center justify-center w-full p-4 rounded-3xl gap-4  ">
+                <View className="flex items-center justify-center p-4">
+                    <Text className="text-3xl font-extrabold mb-10" >{t('select the year you born')}</Text>
                 </View>
                 <Picker
-                    mode="dropdown"
                     style={{
                         height: 60, // Increase height for mobile
                         width: '80%', // Ensure it takes full width
                         color: 'black',
+                        borderRadius: 10,
+                        marginBottom: 10,
+                        backgroundColor: "#F2F3F4"
+
                     }}
                     selectedValue={selectedYear}
                     onValueChange={handleYearChange}

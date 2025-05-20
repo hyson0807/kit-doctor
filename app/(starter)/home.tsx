@@ -22,7 +22,7 @@ const Home = () => {
                         <Image source={require('../../assets/images/logo.png')}/>
 
                     </View>
-                    <View className="bg-primary w-full rounded-3xl flex items-center pb-5">
+                    <View className="bg-primary w-full rounded-3xl flex items-center pb-5 pl-3">
                         <View className="my-8 px-8 w-full ">
                             <Text className="font-bold text-4xl flex-shrink">{t('International students paid')}</Text>
                                 <Text className="font-bold text-[40px] flex-shrink">{t('431,520')}</Text>

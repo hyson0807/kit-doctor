@@ -1,9 +1,9 @@
-import {View, Text, TouchableOpacity, ScrollView, Image} from 'react-native'
+import {View, TouchableOpacity, ScrollView, Image} from 'react-native'
+import Text from '@/components/Text';
 import React, {useState} from 'react'
 import i18next from "@/services/i18next";
 import { useTranslation } from 'react-i18next';
 import ChangeLanguageMenu from "@/components/changeLanguageMenu";
-import FontAwesome from '@expo/vector-icons/FontAwesome';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import {router} from "expo-router";
 
@@ -32,9 +32,10 @@ const Home = () => {
                         <View className="px-8 mb-4 w-full ">
                             <Text className="font-bold text-3xl flex-shrink">{t('subtitle')}</Text>
                         </View>
-                        <TouchableOpacity className="flex-row items-center justify-center  px-4 py-3 rounded-xl bg-[#CCCCCC]" onPress={toggleMenu}>
-                            <Text className="text-center text-2xl font-bold pl-4">{t('language')}</Text>
-                            <AntDesign name="right" size={20} color="black" className="ml-10" />
+                        <TouchableOpacity className="flex-row items-center justify-between gap-8 p-4 rounded-xl bg-[#CCCCCC]" onPress={toggleMenu}>
+                            <AntDesign name="earth" size={24} color="black" />
+                            <Text className="text-center text-2xl font-bold">{t('language')}</Text>
+                            <AntDesign name="right" size={20} color="black" className="" />
                         </TouchableOpacity>
                         {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
 

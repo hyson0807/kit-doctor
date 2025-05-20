@@ -1,4 +1,5 @@
-import {View, Text, TouchableOpacity, TextInput} from 'react-native'
+import {View, TouchableOpacity, TextInput} from 'react-native'
+import Text from '@/components/Text';
 import React, {useState} from 'react'
 import { Picker } from '@react-native-picker/picker';
 import BackBar from "@/components/BackBar";

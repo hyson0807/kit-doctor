@@ -52,13 +52,13 @@ function Teeth() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-3  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-center pl-[5%] gap-5 w-full p-3  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "치과" }
                 })}
             >
-                <Image resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>
+                <Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>
                 <Text className="text-white text-[20.7px] font-bold flex-shrink ">{t('Recommend a Dentist')}</Text>
             </TouchableOpacity>
 
@@ -90,13 +90,13 @@ function Hospital() {
             </View>
 
             <TouchableOpacity
-                className="flex-row items-center justify-start pl-[5%] gap-5 w-full p-3  bg-buttonBlue rounded-2xl"
+                className="flex-row items-center justify-center pl-[5%] gap-5 w-full p-3  bg-buttonBlue rounded-2xl"
                 onPress={()=> router.push({
                     pathname: "/hospital",
                     params: { type: "병원" }
                 })}
             >
-                <Image resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
+                <Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
                 <Text className="text-white text-[20.7px] font-bold flex-shrink">{t('Recommend a Clinic')}</Text>
             </TouchableOpacity>
 

@@ -27,7 +27,17 @@ const GetServices = () => {
                 <View className="flex items-center w-[90%] p-2 gap-5">
                     <View className="flex w-full items-center bg-primary gap-2 p-6 rounded-3xl">
                         <Text className="text-[25px] font-bold flex-shrink">{t('Insurance Benefits You almost missed')}</Text>
-                        {!hospital || hospital.price === undefined ? (<ActivityIndicator size="large" color="#3B82F6" />) : (<Text className="text-[40px] font-bold ">₩{Number(100000 - parseInt(hospital.price)).toLocaleString()}</Text>)}
+                        {!hospital || hospital.price === undefined || hospital.type === undefined ? (
+                            <ActivityIndicator size="large" color="#3B82F6" />
+                        ) : (
+                            <Text className="text-[40px] font-bold">
+                                ₩
+                                {Number(
+                                    (hospital.type === "병원" ? 200000 : 100000) - parseInt(hospital.price)
+                                ).toLocaleString()}
+                            </Text>
+                        )}
+
                     </View>
                     <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl">
 

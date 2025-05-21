@@ -20,13 +20,13 @@ const Hospital = () => {
                         <ActivityIndicator size="large" color="#3B82F6" />
                     ) : (
                         hospitals.map((hospital, index) => (
-                            <View key={hospital._id}  className="flex items-center mb-5 bg-primary w-[90%] gap-5 py-7 pl-5 rounded-3xl">
+                            <View key={hospital._id}  className="flex items-center mb-5 bg-primary w-[90%] gap-5 py-7 px-3 rounded-3xl">
                                 <View className="w-full gap-2">
                                     <Text className="text-[40px] font-bold mb-2">{hospital.hospital_name}</Text>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/star.png')} style={{width: 20, height: 20}}/>
                                         <Text className="text-2xl font-bold">{hospital.rate} / 5.0</Text>
-                                        <Text className="text-2xl font-bold">({hospital.reviews} reviews)</Text>
+                                        <Text className="text-xl font-semibold">({hospital.reviews} reviews)</Text>
                                     </View>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/bookmark.png')} style={{width: 20, height: 20}}/>

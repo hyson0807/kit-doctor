@@ -35,6 +35,13 @@ interface MenuProps {
             }}>
                 <Text>Vietnam</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity className="p-2" onPress={() => {
+                i18next.changeLanguage('uz');
+                setShowMenu(false);
+            }}>
+                <Text>O‘zbekiston tili</Text>
+            </TouchableOpacity>
         </View>
     )
 }

@@ -34,7 +34,7 @@ const CheckArc = () => {
         return (
             <View className="flex items-center justify-center  w-full p-6 rounded-3xl gap-4 bg-primary">
                 <View>
-                    <Text className="text-[26px] font-extrabold" >{t("do you have arc card")}</Text>
+                    <Text className="text-[26px] font-extrabold text-center" >{t("do you have arc card")}</Text>
                 </View>
                 <View className="flex-row items-center justify-around w-full">
                     <TouchableOpacity onPress={() => {

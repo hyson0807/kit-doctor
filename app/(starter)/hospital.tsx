@@ -22,11 +22,11 @@ const Hospital = () => {
                         hospitals.map((hospital, index) => (
                             <View key={hospital._id}  className="flex items-center mb-5 bg-primary w-[90%] gap-5 p-7 rounded-3xl">
                                 <View className="w-full gap-2">
-                                    <Text className="text-[40px] font-bold">{hospital.hospital_name}</Text>
+                                    <Text className="text-[40px] font-bold mb-2">{hospital.hospital_name}</Text>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/star.png')} style={{width: 20, height: 20}}/>
-                                        <Text className="text-2xl">{hospital.rate} / 5.0</Text>
-                                        <Text className="text-2xl">({hospital.reviews}reviews)</Text>
+                                        <Text className="text-2xl font-bold">{hospital.rate} / 5.0</Text>
+                                        <Text className="text-2xl font-bold">({hospital.reviews} reviews)</Text>
                                     </View>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/bookmark.png')} style={{width: 20, height: 20}}/>
@@ -37,13 +37,13 @@ const Hospital = () => {
                                     </View>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/location.png')} style={{width: 20, height: 20}}/>
-                                        <Text className="text-2xl">{hospital.distance}</Text>
+                                        <Text className="text-2xl font-bold">{hospital.distance}</Text>
                                     </View>
                                 </View>
                                 <TouchableOpacity
                                     className="flex items-center justify-center w-full py-3  bg-buttonBlue rounded-2xl"
                                     onPress={()=> router.push({
-                                        pathname: '/last',
+                                        pathname: '/getServices',
                                         params: { hospital_id: hospital._id }
                                     })}
                                 >

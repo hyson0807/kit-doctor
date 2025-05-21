@@ -39,26 +39,41 @@ const Home = () => {
                         {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
 
                     </View>
-                    <View className="flex-row items-center  w-full my-4 p-4 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center  w-full my-4 h-[80px] pl-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-1')}</Text>
+                        <View className="gap-1">
+                        <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-1')}</Text>
+                        <Text  className="flex-shrink text-[18.4px] font-light">{t('h-11')}</Text>
+                        </View>
 
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[80px] pl-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-2')}</Text>
+                        <View className="gap-1">
+                        <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-2')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-22')}</Text>
+                        </View>
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[80px] pl-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-3')}</Text>
+                        <View className="gap-1">
+                        <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-3')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-33')}</Text>
+                        </View>
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[80px] pl-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-4')}</Text>
+                        <View className="gap-1">
+                        <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-4')}</Text>
+                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-44')}</Text>
+                        </View>
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 p-4 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[80px] pl-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <Text className="flex-shrink text-[18.4px] font-semibold">{t('h-5')}</Text>
+                        <View className="gap-1">
+                        <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-5')}</Text>
+                        <Text  className="flex-shrink text-[18.4px] font-light">{t('h-55')}</Text>
+                        </View>
                     </View>
                     {/*<View className="flex-row gap-2">*/}
                     {/*    <Checkbox  value={isChecked} onValueChange={setChecked} />*/}

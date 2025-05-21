@@ -20,7 +20,7 @@ const Hospital = () => {
                         <ActivityIndicator size="large" color="#3B82F6" />
                     ) : (
                         hospitals.map((hospital, index) => (
-                            <View key={hospital._id}  className="flex items-center mb-5 bg-primary w-[90%] gap-5 p-7 rounded-3xl">
+                            <View key={hospital._id}  className="flex items-center mb-5 bg-primary w-[90%] gap-5 py-7 pl-5 rounded-3xl">
                                 <View className="w-full gap-2">
                                     <Text className="text-[40px] font-bold mb-2">{hospital.hospital_name}</Text>
                                     <View className="flex-row items-center gap-2">

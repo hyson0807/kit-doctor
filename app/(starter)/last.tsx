@@ -1,31 +1,27 @@
-import {View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView} from 'react-native'
+import {View, Text} from 'react-native'
 import React from 'react'
 import BackBar from "@/components/BackBar";
-import {router, useLocalSearchParams} from "expo-router";
-import {useQuery} from "convex/react";
-import {api} from "@/convex/_generated/api";
-import {Id} from "@/convex/_generated/dataModel";
 import {t} from "i18next";
 
 const GetServices = () => {
 
     return (
-        <ScrollView>
             <View className="flex-1 items-center">
-                <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-3 ">
+                <View className="flex flex-col items-center  w-full h-full sm:w-[640px]  p-4">
                     <BackBar />
-                    <View className="flex gap-10 items-center ">
-                        <View className="flex items-center w-[90%] p-2 gap-5 bg-primary">
-                            <Text>무료 서비스 당첨!</Text>
+                    <View className="flex-1 w-full h-full  m-5 gap-8">
+                        <View className="flex items-center justify-center w-full h-[132px] bg-primary rounded-2xl p-1">
+                            <Text className="text-center font-extrabold text-4xl">{t('You\'ve won a free service!')}</Text>
                         </View>
-                        <View className="flex items-center w-[90%] p-2 gap-5 bg-primary">
-                            <Text>설문지 작성해주시면 </Text>
-                            <Text>저희가 당신의 보험료를 통해, 할인된 가격으로 한국의 의료 서비스 예약 & 설명까지 도와줄게요!</Text>
+                        <View className="flex-1 items-center justify-center w-full h-[132px] gap-10 bg-primary rounded-2xl">
+                            <Text className="text-2xl text-center font-bold">{t('If you fill out the survey,')}</Text>
+                            <Text className="text-2xl text-center font-bold">{t('We\'ll use your insurance')}</Text>
                         </View>
+
+
                     </View>
                 </View>
             </View>
-        </ScrollView>
     )
 }
 export default GetServices

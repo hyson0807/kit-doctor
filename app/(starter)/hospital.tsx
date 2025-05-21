@@ -26,11 +26,14 @@ const Hospital = () => {
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/star.png')} style={{width: 20, height: 20}}/>
                                         <Text className="text-2xl">{hospital.rate} / 5.0</Text>
-                                        <Text className="text-2xl">({hospital.reviews}개 리뷰)</Text>
+                                        <Text className="text-2xl">({hospital.reviews}reviews)</Text>
                                     </View>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/bookmark.png')} style={{width: 20, height: 20}}/>
-                                        <Text className="text-2xl text-[#79BC6A]">{hospital.relative_price}</Text>
+                                        <Text className="line-through text-2xl text-[#79BC6A]">{hospital.actual_price} </Text>
+                                        <Text>-{'>'}</Text>
+                                        <Text className="text-2xl font-bold text-[#79BC6A]">{hospital.price}</Text>
+
                                     </View>
                                     <View className="flex-row items-center gap-2">
                                         <Image resizeMode="contain" source={require('../../assets/images/location.png')} style={{width: 20, height: 20}}/>

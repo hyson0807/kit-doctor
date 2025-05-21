@@ -10,6 +10,7 @@ export default defineSchema({
         reviews: v.number(),
         relative_price: v.string(),
         price: v.string(),
+        actual_price: v.string(),
         distance: v.string(),
     }).index("type", ["type"]),
 

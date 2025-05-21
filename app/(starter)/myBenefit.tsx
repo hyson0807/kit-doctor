@@ -33,7 +33,7 @@ function Teeth() {
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl ">
             <Text className="text-[22px] font-bold">{t('It\'s a once a year chance !')}</Text>
             <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
-                <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
+                <Text className="text-[23px] font-bold text-center">{t('Max benefit you can use')}</Text>
                 <Text className="text-[40px] font-bold">₩85,000</Text>
             </View>
             <View className="gap-5  w-[80%]">
@@ -71,7 +71,7 @@ function Hospital() {
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
             <Text className="text-[22px] font-bold">{t('You won 50% chance!')}</Text>
             <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
-                <Text className="text-[23px] font-bold">{t('Max benefit you can use')}</Text>
+                <Text className="text-[23px] font-bold text-center">{t('Max benefit you can use')}</Text>
                 <Text className="text-[40px] font-bold">₩200,000</Text>
             </View>
             <View className="gap-5  w-[80%]">

@@ -71,7 +71,7 @@ const CheckArc = () => {
         return (
             <View className="flex items-center justify-center w-full p-4 rounded-3xl gap-4  ">
                 <View className="flex items-center justify-center p-4">
-                    <Text className="text-3xl font-extrabold mb-10" >{t('select the year you born')}</Text>
+                    <Text className="text-3xl text-center font-extrabold mb-10" >{t('select the year you born')}</Text>
                 </View>
                 <Picker
                     style={{

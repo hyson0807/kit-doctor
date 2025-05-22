@@ -32,7 +32,7 @@ const Hospital = () => {
                                         <Image resizeMode="contain" source={require('../../assets/images/bookmark.png')} style={{width: 20, height: 20}}/>
                                         <Text className="line-through text-2xl text-[#79BC6A]">{hospital.actual_price} </Text>
                                         <Text>-{'>'}</Text>
-                                        <Text className="text-2xl font-bold text-[#79BC6A]">{hospital.price}</Text>
+                                        <Text className="text-2xl font-bold text-[#79BC6A]">₩{Number(hospital.price).toLocaleString()}</Text>
 
                                     </View>
                                     <View className="flex-row items-center gap-2">

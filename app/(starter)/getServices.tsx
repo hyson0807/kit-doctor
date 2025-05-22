@@ -79,7 +79,7 @@ const GetServices = () => {
                     </View>
                     <View className="flex items-center justify-center w-full gap-3">
                         <TouchableOpacity
-                            className="flex items-center justify-center w-full p-3 bg-red-500 rounded-2xl"
+                            className="flex items-center justify-center w-full p-3 bg-buttonBlue rounded-2xl"
                             onPress={() => {
                                 if (Platform.OS === 'web') {
                                     const confirmed = window.confirm(t("₩500 will be charged. Would you like to proceed?"));

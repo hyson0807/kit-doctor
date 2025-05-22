@@ -58,7 +58,11 @@
   "Get All Benefits" : "500 so‘mni darhol to‘lash!",
 
 
-  "You've won a free service!" : "Bepul xizmatni yutib oling!",
+  "₩500 will be charged. Would you like to proceed?": "₩500 yechib olinadi. Davom etishni xohlaysizmi?",
+
+
+
+"You've won a free service!" : "Bepul xizmatni yutib oling!",
   "If you fill out the survey," : "Iltimos, anketani to'ldiring",
   "We'll use your insurance" : "Biz sug'urta mukofotlari orqali to'laymiz\nchegirmali narxda\nKoreyada tibbiy xizmatlar\nRezervasyonlar va tushuntirishlar \nbilan sizga yordam beraman!"
 }

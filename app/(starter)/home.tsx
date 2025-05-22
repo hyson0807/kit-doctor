@@ -39,7 +39,7 @@ const Home = () => {
                         {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
 
                     </View>
-                    <View className="flex-row items-center  w-full my-4 h-[110px] pl-3 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center  w-full my-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <View className="gap-1  flex-1 w-full">
                         <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-1')}</Text>
@@ -47,28 +47,28 @@ const Home = () => {
                         </View>
 
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] pl-3 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <View className="gap-1  flex-1 w-full">
                         <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-2')}</Text>
                         <Text className="flex-shrink text-[18.4px] font-light">{t('h-22')}</Text>
                         </View>
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] pl-3 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <View className="gap-1  flex-1 w-full">
                         <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-3')}</Text>
                         <Text className="flex-shrink text-[18.4px] font-light">{t('h-33')}</Text>
                         </View>
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] pl-3 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <View className="gap-1  flex-1 w-full">
                         <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-4')}</Text>
                         <Text className="flex-shrink text-[18.4px] font-light">{t('h-44')}</Text>
                         </View>
                     </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] pl-3 gap-4 bg-primary rounded-3xl">
+                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
                         <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
                         <View className="gap-1  flex-1 w-full">
                         <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-5')}</Text>

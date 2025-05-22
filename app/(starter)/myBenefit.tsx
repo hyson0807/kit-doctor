@@ -1,5 +1,5 @@
-import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native'
-import React from 'react'
+import {View, Text, ScrollView, TouchableOpacity, Image, ActivityIndicator} from 'react-native'
+import React, {useEffect, useState} from 'react'
 import BackBar from "@/components/BackBar";
 import {router} from "expo-router";
 import { useLocalSearchParams } from 'expo-router';
@@ -10,17 +10,33 @@ const MyBenefit = () => {
     const { year } = useLocalSearchParams<{ year : string }>();
     const selectedYear = parseInt(year, 10);
 
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 2000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <ScrollView>
         <View className="flex-1 items-center">
             <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-4 gap-10">
                 <BackBar/>
-                { selectedYear % 2 === 0 ? <Teeth/> : (
-                    <View className="flex-1 w-full items-center gap-5 pb-10">
-                        <Teeth/>
-                        <Hospital/>
+                {loading ? (
+                    <View className="flex-1 items-center justify-center py-20">
+                        <ActivityIndicator size="large" color="#1682F9" />
+                        <Text className="mt-4 text-[18px] font-semibold">{t('Loading your benefit...')}</Text>
                     </View>
-                    )}
+                ) : (
+                    selectedYear % 2 === 0 ? (
+                        <Teeth />
+                    ) : (
+                        <View className="flex-1 w-full items-center gap-5 pb-10">
+                            <Teeth />
+                            <Hospital />
+                        </View>
+                    )
+                )}
 
             </View>
         </View>
@@ -31,7 +47,7 @@ const MyBenefit = () => {
 function Teeth() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl ">
-            <Text className="text-[22px] font-bold">{t('It\'s a once a year chance !')}</Text>
+            <Text className="text-[22px] font-bold text-center">{t('It\'s a once a year chance !')}</Text>
             <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold text-center">{t('Max benefit you can use')}</Text>
                 <Text className="text-[40px] font-bold">₩85,000</Text>
@@ -69,7 +85,7 @@ function Teeth() {
 function Hospital() {
     return (
         <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl">
-            <Text className="text-[22px] font-bold">{t('You won 50% chance!')}</Text>
+            <Text className="text-[22px] font-bold text-center">{t('You won 50% chance!')}</Text>
             <View className="flex items-center justify-center w-full p-4 bg-white rounded-3xl gap-2">
                 <Text className="text-[23px] font-bold text-center">{t('Max benefit you can use')}</Text>
                 <Text className="text-[40px] font-bold">₩200,000</Text>

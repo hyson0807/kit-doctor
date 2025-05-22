@@ -1,4 +1,4 @@
-import {View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView} from 'react-native'
+import {View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView, Platform, Alert} from 'react-native'
 import React from 'react'
 import BackBar from "@/components/BackBar";
 import {router, useLocalSearchParams} from "expo-router";
@@ -26,7 +26,7 @@ const GetServices = () => {
                 <BackBar />
                 <View className="flex items-center w-[90%] p-2 gap-5">
                     <View className="flex w-full items-center bg-primary gap-2 p-6 rounded-3xl">
-                        <Text className="text-[25px] font-bold flex-shrink">{t('Insurance Benefits You almost missed')}</Text>
+                        <Text className="text-[25px] font-bold flex-shrink text-center">{t('Insurance Benefits You almost missed')}</Text>
                         {!hospital || hospital.price === undefined || hospital.type === undefined ? (
                             <ActivityIndicator size="large" color="#3B82F6" />
                         ) : (
@@ -44,7 +44,7 @@ const GetServices = () => {
                         <Text className="text-[24px] font-bold">{t("One click, No stress")}</Text>
                         <Text className="text-[18px] font-bold">{t('Don\'t lose your money already paid!')}</Text>
                     </View>
-                    <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl bg-blue-200">
+                    <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl">
 
                         <View className="w-full">
                             <Text className="text-[23px] font-bold text-[#729FE8]">{t('All this, just 500 KRW')}</Text>
@@ -65,11 +65,11 @@ const GetServices = () => {
                             <Image resizeMode="contain" source={require('../../assets/images/checkList.png')} style={{width: 29, height: 29}}/>
                             <Text className=" text-[18.4px] flex-shrink font-medium">{t('Medical service guide')}</Text>
                         </View>
-                        <View className="flex-row w-full gap-4 items-center bg-pink-400 ">
+                        <View className="flex-row w-full gap-4 items-center">
                             <Image resizeMode="contain" source={require('../../assets/images/message.png')} style={{width: 29, height: 29}}/>
                             <Text className=" text-[18.4px] flex-shrink font-medium">{t('Just use your language')}</Text>
                         </View>
-                        <View className="flex-row w-full gap-4 items-center bg-pink-400 ">
+                        <View className="flex-row w-full gap-4 items-center">
                             <Image resizeMode="contain" source={require('../../assets/images/talk.png')} style={{width: 29, height: 29}}/>
                             <View className="flex-1 w-full ">
                                 <Text className=" text-[18.4px] flex-shrink font-medium">{t('Some issue?')}</Text>
@@ -79,11 +79,30 @@ const GetServices = () => {
                     </View>
                     <View className="flex items-center justify-center w-full gap-3">
                         <TouchableOpacity
-                            className="flex items-center justify-center w-full p-3  bg-buttonBlue rounded-2xl"
-                            onPress={()=> router.push('/last')}
+                            className="flex items-center justify-center w-full p-3 bg-red-500 rounded-2xl"
+                            onPress={() => {
+                                if (Platform.OS === 'web') {
+                                    const confirmed = window.confirm(t("₩500 will be charged. Would you like to proceed?"));
+                                    if (confirmed) {
+                                        router.push('/last');
+                                    }
+                                } else {
+                                    Alert.alert(
+                                        "안내",
+                                        "500원이 결제됩니다. 진행하시겠습니까?",
+                                        [
+                                            { text: "아니오", style: "cancel" },
+                                            { text: "예", onPress: () => router.push('/last') },
+                                        ]
+                                    );
+                                }
+                            }}
                         >
-                            <Text className="text-white font-bold text-[20.7px] flex-shrink text-center">{t('Get All Benefits')}</Text>
+                            <Text className="text-white font-bold text-[20.7px] flex-shrink text-center">
+                                {t('Get All Benefits')}
+                            </Text>
                         </TouchableOpacity>
+
                     </View>
                 </View>
             </View>

@@ -43,13 +43,21 @@
   "Clinics are recommended based on distance from school, and high satisfaction ratings." : "평균보다 저렴하고, 학교와 가까우며 만족도가 높은 병원을 우선 추천드려요",
   "Use What You Already Paid" : "이미 낸 돈 쓰러 가기",
   "Insurance Benefits You almost missed" : "당신이 놓칠 뻔 한 보험료",
-  "Final step!" : "이제 마지막이에요!",
-  "WelKit will take care of it all for you." : "Kit가 다 대신 해줄게요",
-  "Your chosen clinic" : "너가 선택한 병원은 10만원에서 2만원",
-  "If price is different, Welkit will connect hospital for you" : "가격 다르면, Kit가 병원에 대신 확인해줄께요",
-  "We’ll handle the booking, instructions, and guide for you." : "예약&설명&가이드 대신 해줄께요",
-  "No Korean — just show the WelKit screen to clinic." : "한국말 없이, 너는 Kit화면만 보여주면 되요",
-  "Get All Benefits" : "모든 서비스 받기",
+
+  "One click, No stress" : "One click, No stress",
+  "Don't lose your money already paid!" : "Don't lose your money already paid!",
+
+  "All this, just 500 KRW" : "All this, just 500 KRW",
+  "Assist to get 80% discount" : "Assist to get 80% discount",
+  "Proxy symptom explanation" : "If price is different, Welkit will connect hospital for you",
+  "Reservation Clinic" : "We’ll handle the booking, instructions, and guide for you.",
+  "Medical service guide" : "No Korean — just show the WelKit screen to clinic.",
+  "Just use your language" : "Just use your language",
+  "Some issue?" : "Some issue?",
+  "Talk with hospital for you" : "Talk with hospital for you",
+  "Get All Benefits" : "Pay ₩500",
+
+
   "You've won a free service!" : "무료 서비스 당첨! ",
   "If you fill out the survey," : "설문지 작성해주시면 ",
   "We'll use your insurance" : "저희가 당신의 보험료를 통해, \n할인된 가격으로 \n한국의 의료 서비스 \n예약 & 설명까지 \n도와줄게요!"

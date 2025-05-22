@@ -43,13 +43,22 @@
   "Clinics are recommended based on distance from school, and high satisfaction ratings.": "医院推荐基于与学校的距离及用户满意度",
   "Use What You Already Paid": "使用你已缴纳的费用",
   "Insurance Benefits You almost missed": "差点错过的医保福利",
-  "Final step!": "最后一步！",
-  "WelKit will take care of it all for you.": "WelKit全程为你搞定",
-  "Your chosen clinic": "你选择的医院",
-  "If price is different, Welkit will connect hospital for you": "如果价格不同，WelKit会帮你联系医院确认",
-  "We’ll handle the booking, instructions, and guide for you.": "预约、说明、引导我们全包",
-  "No Korean — just show the WelKit screen to clinic.": "不会韩语？只需出示WelKit界面即可",
-  "Get All Benefits": "一键领取所有福利",
+
+
+  "One click, No stress" : "One click, No stress",
+  "Don't lose your money already paid!" : "Don't lose your money already paid!",
+
+  "All this, just 500 KRW" : "All this, just 500 KRW",
+  "Assist to get 80% discount" : "Assist to get 80% discount",
+  "Proxy symptom explanation" : "If price is different, Welkit will connect hospital for you",
+  "Reservation Clinic" : "We’ll handle the booking, instructions, and guide for you.",
+  "Medical service guide" : "No Korean — just show the WelKit screen to clinic.",
+  "Just use your language" : "Just use your language",
+  "Some issue?" : "Some issue?",
+  "Talk with hospital for you" : "Talk with hospital for you",
+  "Get All Benefits" : "Pay ₩500",
+
+
   "You've won a free service!" : "恭喜您获得免费服务！",
   "If you fill out the survey," : "请填写我们的问卷，",
   "We'll use your insurance" : "我们会通过您的保险信息，\n我们将以优惠价格帮\n助您预订并讲解韩国的医疗服务！"

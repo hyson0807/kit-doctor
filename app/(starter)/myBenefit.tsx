@@ -39,15 +39,15 @@ function Teeth() {
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">{t('Dental scaling')}</Text>
+                    <Text className="flex-shrink text-[18.4px] font-semibold">{t('Dental scaling')}</Text>
                 </View>
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">{t('Tooth care , Dental cleaned')}</Text>
+                    <Text className="flex-shrink text-[18.4px] font-semibold">{t('Tooth care , Dental cleaned')}</Text>
                 </View>
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">{t('Pay 20%, get 100% of the care-only in')}</Text>
+                    <Text className="flex-shrink text-[18.4px] font-semibold">{t('Pay 20%, get 100% of the care-only in')}</Text>
                 </View>
             </View>
 
@@ -58,7 +58,7 @@ function Teeth() {
                     params: { type: "치과" }
                 })}
             >
-                <Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>
+                {/*<Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>*/}
                 <Text className="text-white text-[20.7px] font-bold flex-shrink ">{t('Recommend a Dentist')}</Text>
             </TouchableOpacity>
 
@@ -77,15 +77,15 @@ function Hospital() {
             <View className="gap-5  w-[80%]">
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">{t('You can do Free Health Check-up')}</Text>
+                    <Text className="flex-shrink text-[18.4px] font-semibold">{t('You can do Free Health Check-up')}</Text>
                 </View>
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">{t('Miss it now, Wait 2 years.')}</Text>
+                    <Text className="flex-shrink text-[18.4px] font-semibold">{t('Miss it now, Wait 2 years.')}</Text>
                 </View>
                 <View className="flex-row items-center gap-4">
                     <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                    <Text className="flex-shrink text-[18.4px]">{t('Benefit of Korea Life,')}</Text>
+                    <Text className="flex-shrink text-[18.4px] font-semibold">{t('Benefit of Korea Life,')}</Text>
                 </View>
             </View>
 
@@ -96,7 +96,7 @@ function Hospital() {
                     params: { type: "병원" }
                 })}
             >
-                <Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>
+                {/*<Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/hospital.png')} style={{width: 25, height: 25}}/>*/}
                 <Text className="text-white text-[20.7px] font-bold flex-shrink">{t('Recommend a Clinic')}</Text>
             </TouchableOpacity>
 

@@ -44,7 +44,7 @@ const GetServices = () => {
                         <Text className="text-[24px] font-bold">{t("One click, No stress")}</Text>
                         <Text className="text-[18px] font-bold">{t('Don\'t lose your money already paid!')}</Text>
                     </View>
-                    <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl">
+                    <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl bg-blue-200">
 
                         <View className="w-full">
                             <Text className="text-[23px] font-bold text-[#729FE8]">{t('All this, just 500 KRW')}</Text>
@@ -65,13 +65,13 @@ const GetServices = () => {
                             <Image resizeMode="contain" source={require('../../assets/images/checkList.png')} style={{width: 29, height: 29}}/>
                             <Text className=" text-[18.4px] flex-shrink font-medium">{t('Medical service guide')}</Text>
                         </View>
-                        <View className="flex-row w-full gap-4 items-center ">
+                        <View className="flex-row w-full gap-4 items-center bg-pink-400 ">
                             <Image resizeMode="contain" source={require('../../assets/images/message.png')} style={{width: 29, height: 29}}/>
                             <Text className=" text-[18.4px] flex-shrink font-medium">{t('Just use your language')}</Text>
                         </View>
-                        <View className="flex-row w-full gap-4 items-center ">
+                        <View className="flex-row w-full gap-4 items-center bg-pink-400 ">
                             <Image resizeMode="contain" source={require('../../assets/images/talk.png')} style={{width: 29, height: 29}}/>
-                            <View className="">
+                            <View className="flex-1 w-full ">
                                 <Text className=" text-[18.4px] flex-shrink font-medium">{t('Some issue?')}</Text>
                                 <Text className=" text-[18.4px] flex-shrink font-medium">{t('Talk with hospital for you')}</Text>
                             </View>

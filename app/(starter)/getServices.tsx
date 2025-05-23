@@ -16,36 +16,38 @@ const GetServices = () => {
     const scrollRef = useRef<ScrollView>(null);
 
     return (
+        <View className="flex-1 ">
+        {isModalVisible && (
+            <View className="absolute top-0 left-0 w-full h-full bg-black/40 items-center justify-center z-50">
+                <View className="bg-white p-6 rounded-2xl w-[85%] items-center gap-4">
+                    <Text className="text-lg font-bold text-center">
+                        {t("₩500 will be charged. Would you like to proceed?")}
+                    </Text>
+                    <View className="flex-row gap-4 mt-4">
+                        <TouchableOpacity
+                            className="bg-gray-300 rounded-xl px-4 py-2"
+                            onPress={() => setIsModalVisible(false)}
+                        >
+                            <Text>{t('Cancel')}</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            className="bg-buttonBlue rounded-xl px-4 py-2"
+                            onPress={() => {
+                                setIsModalVisible(false);
+                                router.push('/last');
+                            }}
+                        >
+                            <Text className="text-white">{t('Yes')}</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
+        )}
         <ScrollView ref={scrollRef}>
         <View className="flex-1 items-center">
             <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-3 ">
                 <BackBar />
-                {isModalVisible && (
-                    <View className="absolute top-0 left-0 w-full h-full bg-black/40 items-center justify-center z-50">
-                        <View className="bg-white p-6 rounded-2xl w-[85%] items-center gap-4">
-                            <Text className="text-lg font-bold text-center">
-                                {t("₩500 will be charged. Would you like to proceed?")}
-                            </Text>
-                            <View className="flex-row gap-4 mt-4">
-                                <TouchableOpacity
-                                    className="bg-gray-300 rounded-xl px-4 py-2"
-                                    onPress={() => setIsModalVisible(false)}
-                                >
-                                    <Text>{t('Cancel')}</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity
-                                    className="bg-buttonBlue rounded-xl px-4 py-2"
-                                    onPress={() => {
-                                        setIsModalVisible(false);
-                                        router.push('/last');
-                                    }}
-                                >
-                                    <Text className="text-white">{t('Yes')}</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                    </View>
-                )}
+
                 <View className="flex items-center w-[90%] p-2 gap-5">
                     <View className="flex w-full items-center bg-primary gap-2 p-6 rounded-3xl">
                         <Text className="text-[25px] font-bold flex-shrink text-center">{t('Insurance Benefits You almost missed')}</Text>
@@ -122,6 +124,7 @@ const GetServices = () => {
             </View>
         </View>
         </ScrollView>
+        </View>
     )
 
 

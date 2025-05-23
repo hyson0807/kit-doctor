@@ -1,5 +1,5 @@
 import {View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView, Platform, Alert} from 'react-native'
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import BackBar from "@/components/BackBar";
 import {router, useLocalSearchParams} from "expo-router";
 import {useQuery} from "convex/react";
@@ -13,9 +13,10 @@ const GetServices = () => {
     const hospital = useQuery(api.hospitals.getHospitalById, {
         id: hospital_id as Id<"hospitals">,
     });
+    const scrollRef = useRef<ScrollView>(null);
 
     return (
-        <ScrollView>
+        <ScrollView ref={scrollRef}>
         <View className="flex-1 items-center">
             <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-3 ">
                 <BackBar />
@@ -102,7 +103,14 @@ const GetServices = () => {
 
                         <TouchableOpacity
                             className="flex items-center justify-center w-full p-3 bg-buttonBlue rounded-2xl"
-                            onPress={() => setIsModalVisible(true)}
+                            onPress={() => {
+                                scrollRef.current?.scrollTo({ y: 0, animated: true });
+
+                                // 약간의 지연을 주고 모달을 띄움 (스크롤 애니메이션 후)
+                                setTimeout(() => {
+                                    setIsModalVisible(true);
+                                }, 300); // 300ms 정도면 충분
+                            }}
                         >
                             <Text className="text-white font-bold text-[20.7px] flex-shrink text-center">
                                 {t('Get All Benefits')}

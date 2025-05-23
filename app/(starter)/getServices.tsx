@@ -1,5 +1,5 @@
 import {View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView, Platform, Alert} from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import BackBar from "@/components/BackBar";
 import {router, useLocalSearchParams} from "expo-router";
 import {useQuery} from "convex/react";
@@ -8,22 +8,43 @@ import {Id} from "@/convex/_generated/dataModel";
 import {t} from "i18next";
 
 const GetServices = () => {
-
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const { hospital_id } = useLocalSearchParams<{ hospital_id : string }>();
-
     const hospital = useQuery(api.hospitals.getHospitalById, {
         id: hospital_id as Id<"hospitals">,
     });
-
-
-
-
 
     return (
         <ScrollView>
         <View className="flex-1 items-center">
             <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-3 ">
                 <BackBar />
+                {isModalVisible && (
+                    <View className="absolute top-0 left-0 w-full h-full bg-black/40 items-center justify-center z-50">
+                        <View className="bg-white p-6 rounded-2xl w-[85%] items-center gap-4">
+                            <Text className="text-lg font-bold text-center">
+                                {t("₩500 will be charged. Would you like to proceed?")}
+                            </Text>
+                            <View className="flex-row gap-4 mt-4">
+                                <TouchableOpacity
+                                    className="bg-gray-300 rounded-xl px-4 py-2"
+                                    onPress={() => setIsModalVisible(false)}
+                                >
+                                    <Text>{t('Cancel')}</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    className="bg-buttonBlue rounded-xl px-4 py-2"
+                                    onPress={() => {
+                                        setIsModalVisible(false);
+                                        router.push('/last');
+                                    }}
+                                >
+                                    <Text className="text-white">{t('Yes')}</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </View>
+                )}
                 <View className="flex items-center w-[90%] p-2 gap-5">
                     <View className="flex w-full items-center bg-primary gap-2 p-6 rounded-3xl">
                         <Text className="text-[25px] font-bold flex-shrink text-center">{t('Insurance Benefits You almost missed')}</Text>
@@ -78,25 +99,10 @@ const GetServices = () => {
                         </View>
                     </View>
                     <View className="flex items-center justify-center w-full gap-3">
+
                         <TouchableOpacity
                             className="flex items-center justify-center w-full p-3 bg-buttonBlue rounded-2xl"
-                            onPress={() => {
-                                if (Platform.OS === 'web') {
-                                    const confirmed = window.confirm(t("₩500 will be charged. Would you like to proceed?"));
-                                    if (confirmed) {
-                                        router.push('/last');
-                                    }
-                                } else {
-                                    Alert.alert(
-                                        "안내",
-                                        "500원이 결제됩니다. 진행하시겠습니까?",
-                                        [
-                                            { text: "아니오", style: "cancel" },
-                                            { text: "예", onPress: () => router.push('/last') },
-                                        ]
-                                    );
-                                }
-                            }}
+                            onPress={() => setIsModalVisible(true)}
                         >
                             <Text className="text-white font-bold text-[20.7px] flex-shrink text-center">
                                 {t('Get All Benefits')}
@@ -109,5 +115,9 @@ const GetServices = () => {
         </View>
         </ScrollView>
     )
+
+
 }
+
+
 export default GetServices

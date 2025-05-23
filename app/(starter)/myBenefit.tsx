@@ -51,7 +51,7 @@ function Teeth() {
                 <View className="flex items-center justify-center pt-5 p-2">
                     <Image  className="absolute right-0 top-0" resizeMode="contain" source={require('../../assets/images/firework.png')} style={{width: 44, height: 46}}/>
                     <Text className="text-[29px] font-bold">{t('80% off')}</Text>
-                    <Text className="text-[29px] font-bold">{t('Dental scaling winner!')}</Text>
+                    <Text className="text-[29px] font-bold text-center">{t('Dental scaling winner!')}</Text>
                 </View>
                 <View className="flex items-center  py-5">
                     <Image  resizeMode="contain" source={require('../../assets/images/bigTeeth.png')} style={{width: 167, height: 126}}/>
@@ -102,7 +102,7 @@ function Hospital() {
                 <View className="flex items-center justify-center pt-5 p-2">
                     <Image  className="absolute right-0 top-0" resizeMode="contain" source={require('../../assets/images/firework.png')} style={{width: 44, height: 46}}/>
                     <Text className="text-[29px] font-bold">{t('Free')}</Text>
-                    <Text className="text-[29px] font-bold">{t('Health check-up winner!')}</Text>
+                    <Text className="text-[29px] font-bold text-center">{t('Health check-up winner!')}</Text>
                 </View>
                 <View className="flex items-center  py-5">
                     <Image  resizeMode="contain" source={require('../../assets/images/scope.png')} style={{width: 167, height: 126}}/>

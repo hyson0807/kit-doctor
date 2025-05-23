@@ -15,9 +15,8 @@ const GetServices = () => {
     });
     const scrollRef = useRef<ScrollView>(null);
 
-    return (
-        <View className="flex-1 ">
-        {isModalVisible && (
+    function Check() {
+        return(
             <View className="absolute top-0 left-0 w-full h-full bg-black/40 items-center justify-center z-50">
                 <View className="bg-white p-6 rounded-2xl w-[85%] items-center gap-4">
                     <Text className="text-lg font-bold text-center">
@@ -42,6 +41,13 @@ const GetServices = () => {
                     </View>
                 </View>
             </View>
+        )
+    }
+
+    return (
+        <View className="flex-1 ">
+        {isModalVisible && (
+            <Check />
         )}
         <ScrollView ref={scrollRef}>
         <View className="flex-1 items-center">
@@ -102,7 +108,6 @@ const GetServices = () => {
                         </View>
                     </View>
                     <View className="flex items-center justify-center w-full gap-3">
-
                         <TouchableOpacity
                             className="flex items-center justify-center w-full p-3 bg-buttonBlue rounded-2xl"
                             onPress={() => {

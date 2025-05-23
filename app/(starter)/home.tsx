@@ -17,7 +17,7 @@ const Home = () => {
         <ScrollView>
             <View className="flex-1 items-center ">
 
-                <View className="flex flex-col items-center w-full h-full sm:w-[640px] bg-background p-4">
+                <View className="flex flex-col items-center w-full  sm:w-[640px] bg-background p-4">
                     <View className="flex-row items-center justify-center w-full  mb-2 ">
                         <Image source={require('../../assets/images/logo.png')}/>
 
@@ -44,7 +44,7 @@ const Home = () => {
                         <View className="gap-1  flex-1 w-full">
                         <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-1')}</Text>
                         <Text className="flex-shrink text-[18.4px] font-light">{t('h-11')}</Text>
-                        </View>
+                    </View>
 
                     </View>
                     <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
@@ -86,7 +86,17 @@ const Home = () => {
                     >
                         <Text className="text-white text-center text-[20.7px] font-bold flex-shrink">{t('checkMyBenefit')}</Text>
                     </TouchableOpacity>
+
+
                 </View>
+
+                <View className="flex justify-center items-center my-10 gap-2">
+                    <Text className="font-thin">상호명: Welkit</Text>
+                    <Text className="font-thin">사업자등록번호: 849-06-03189</Text>
+                    <Text className="font-thin">통신판매업신고</Text>
+                    <Text className="font-thin">이메일 : jiwonn0207@gmail.com</Text>
+                </View>
+
 
             </View>
         </ScrollView>

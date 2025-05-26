@@ -68,6 +68,9 @@ const CheckArc = () => {
             setShowNext(true); // ✅ 연도 선택하면 다음 컴포넌트 보여주기
         };
 
+        const [name, setName] = useState('');
+        const [email, setEmail] = useState('');
+
         return (
             <View className="flex items-center justify-center w-full p-4 rounded-3xl gap-4  ">
                 <View className="flex items-center justify-center p-4">
@@ -91,12 +94,18 @@ const CheckArc = () => {
                         <Picker.Item key={year} label={`${year}`} value={year} />
                     ))}
                 </Picker>
+                <View className="flex-1 items-center justify-center w-full h-10 ">
+                    <Text>당신을 위한 혜택이 있어요!</Text>
+                    <TextInput className="bg-primary" value={name} onChangeText={setName} placeholder={"Name"}/>
+                    <TextInput className="bg-primary"  value={email} onChangeText={setEmail} placeholder={"email"} />
+                </View>
             </View>
         )
     }
 
     function Next() {
         return (
+
                 <TouchableOpacity
                     className="flex items-center justify-center w-[80%] mt-40 p-4 my-4  bg-buttonBlue rounded-2xl"
                     onPress={()=> router.push({

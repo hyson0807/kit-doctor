@@ -92,9 +92,9 @@ const Home = () => {
 
                 <View className="flex justify-center items-center my-10 gap-2">
                     <Text className="font-thin">상호명: Welkit</Text>
-                    <Text className="font-thin">사업자등록번호: 849-06-03189</Text>
-                    <Text className="font-thin">통신판매업신고</Text>
-                    <Text className="font-thin">이메일 : jiwonn0207@gmail.com</Text>
+                    <Text className="font-thin">사업자등록번호: 849-06-03189|대표 : 유지원</Text>
+                    <Text className="font-thin">jiwonn0207@gmail.com  010-8335-7026</Text>
+                    <Text className="font-thin">경기도 수원시 영통구 센트럴파크로 33</Text>
                 </View>
 
 

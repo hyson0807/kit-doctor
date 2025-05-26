@@ -5,7 +5,7 @@ import { useMutation } from "convex/react";
 import { router } from "expo-router";
 import { t } from "i18next";
 import React, {useEffect, useRef, useState} from 'react';
-import { Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {ScrollView, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
 const CheckArc = () => {
     const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
@@ -14,6 +14,7 @@ const CheckArc = () => {
     const [showNo, setShowNo] = useState(false);
 
     return (
+        <ScrollView>
                 <View className="flex-1 items-center">
                     <View className="flex flex-col items-center  w-full h-full sm:w-[640px] bg-background p-4 gap-10">
                         <BackBar />
@@ -22,6 +23,7 @@ const CheckArc = () => {
                         {showNo && <IfNo/>}
                     </View>
                 </View>
+        </ScrollView>
     )
 
     function Arc() {
@@ -70,7 +72,7 @@ const CheckArc = () => {
 
         return (
             <View className="flex-1 items-center w-full">
-                <View className="flex items-center justify-center p-4 bg-primary rounded-3xl w-full gap-4">
+                <View className="flex items-center justify-center px-4 py-10 bg-primary rounded-3xl w-full gap-4">
                         <Text className="text-3xl text-center flex-shrink font-extrabold">
                             {t('select the year you born')}
                         </Text>
@@ -83,7 +85,7 @@ const CheckArc = () => {
                             keyboardType="numeric"
                             className="w-[80%] h-[60px] bg-white text-black text-xl rounded-2xl px-4"
                         />
-                        <Text className="text-3xl text-center flex-shrink font-extrabold gap-4">당신을 위한 혜택이 있어요!</Text>
+                        <Text className="text-3xl text-center flex-shrink font-extrabold gap-4 mt-8">당신을 위한 혜택이 있어요!</Text>
                         <TextInput
                         className="bg-white w-[80%] h-[60px] rounded-2xl p-2"
                         value={name}
@@ -97,7 +99,7 @@ const CheckArc = () => {
                         placeholder="Email"
                         />
                 </View>
-                <TouchableOpacity className="absolute bottom-0 flex items-center justify-center w-[80%] mt-40 p-4 my-4  bg-buttonBlue rounded-2xl" onPress={check}>
+                <TouchableOpacity className=" flex items-center justify-center w-[80%] mt-8 p-4 my-4  bg-buttonBlue rounded-2xl" onPress={check}>
                     <Text className="text-white text-[20.7px] font-bold text-center">{t('check my benefit')}</Text>
                 </TouchableOpacity>
             </View>

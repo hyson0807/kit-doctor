@@ -1,9 +1,10 @@
-import {View, Text, ScrollView, TouchableOpacity, Image, ActivityIndicator} from 'react-native'
+import {View, Text, ScrollView, TouchableOpacity, Image, ActivityIndicator, Dimensions} from 'react-native'
 import React, {useEffect, useState} from 'react'
 import BackBar from "@/components/BackBar";
 import {router} from "expo-router";
 import { useLocalSearchParams } from 'expo-router';
 import {t} from "i18next";
+import Animated from 'react-native-reanimated';
 
 const MyBenefit = () => {
 
@@ -16,6 +17,8 @@ const MyBenefit = () => {
         const timer = setTimeout(() => setLoading(false), 2000);
         return () => clearTimeout(timer);
     }, []);
+
+
 
     return (
         <ScrollView>
@@ -32,8 +35,8 @@ const MyBenefit = () => {
                         <Teeth />
                     ) : (
                         <View className="flex-1 w-full items-center gap-5 pb-10">
-                            <Teeth />
-                            <Hospital />
+                                <Teeth />
+                                <Hospital />
                         </View>
                     )
                 )}
@@ -45,8 +48,9 @@ const MyBenefit = () => {
 }
 
 function Teeth() {
+
     return (
-        <View className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl ">
+        <View  className="flex items-center bg-primary w-[90%] gap-5 p-5 rounded-3xl ">
             <View className="flex-1 w-full bg-white p-3 rounded-2xl">
                 <View className="flex items-center justify-center pt-5 p-2">
                     <Image  className="absolute right-0 top-0" resizeMode="contain" source={require('../../assets/images/firework.png')} style={{width: 44, height: 46}}/>

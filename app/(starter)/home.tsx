@@ -17,19 +17,19 @@ const Home = () => {
         <ScrollView>
             <View className="flex-1 items-center ">
 
-                <View className="flex flex-col items-center w-full  sm:w-[640px] bg-background p-4">
+                <View className="flex-1 flex-col items-center w-full  sm:w-[640px] bg-background p-4">
                     <View className="flex-row items-center justify-center w-full  mb-2 ">
                         <Image source={require('../../assets/images/logo.png')}/>
 
                     </View>
                     <View className="bg-primary w-full rounded-3xl flex items-center pb-5 pl-3">
                         <View className="my-8 px-8 w-full ">
-                            <Text className="font-bold text-4xl flex-shrink">{t('International students paid')}</Text>
+                            <Text className="font-bold text-4xl flex-shrink">You pay{'\n'}health insurance</Text>
                                 <Text className="font-bold text-[40px] flex-shrink">{t('431,520')}</Text>
-                            <Text className="font-bold text-4xl flex-shrink">{t('for health insurance every 6 months')}</Text>
+                            <Text className="font-bold text-4xl flex-shrink">Used: ₩0</Text>
                         </View>
                         <View className="px-8 mb-4 w-full ">
-                            <Text className="font-bold text-3xl flex-shrink">{t('subtitle')}</Text>
+                            <Text className="font-bold text-3xl flex-shrink">You can use it{'\n'}even not sick!</Text>
                         </View>
                         <TouchableOpacity className="flex-row items-center justify-between gap-8 p-4 rounded-xl bg-[#CCCCCC]" onPress={toggleMenu}>
                             <AntDesign name="earth" size={24} color="black" />
@@ -39,47 +39,49 @@ const Home = () => {
                         {showMenu && <ChangeLanguageMenu setShowMenu={setShowMenu}/>}
 
                     </View>
-                    <View className="flex-row items-center  w-full my-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
-                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <View className="gap-1  flex-1 w-full">
-                        <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-1')}</Text>
-                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-11')}</Text>
-                    </View>
+                    {/*<View className="flex-row items-center  w-full my-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">*/}
+                    {/*    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>*/}
+                    {/*    <View className="gap-1  flex-1 w-full">*/}
+                    {/*    <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-1')}</Text>*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-light">{t('h-11')}</Text>*/}
+                    {/*</View>*/}
 
-                    </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
-                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <View className="gap-1  flex-1 w-full">
-                        <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-2')}</Text>
-                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-22')}</Text>
-                        </View>
-                    </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
-                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <View className="gap-1  flex-1 w-full">
-                        <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-3')}</Text>
-                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-33')}</Text>
-                        </View>
-                    </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
-                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <View className="gap-1  flex-1 w-full">
-                        <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-4')}</Text>
-                        <Text className="flex-shrink text-[18.4px] font-light">{t('h-44')}</Text>
-                        </View>
-                    </View>
-                    <View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">
-                        <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>
-                        <View className="gap-1  flex-1 w-full">
-                        <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-5')}</Text>
-                        <Text  className="flex-shrink text-[18.4px] font-light">{t('h-55')}</Text>
-                        </View>
-                    </View>
+                    {/*</View>*/}
+                    {/*<View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">*/}
+                    {/*    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>*/}
+                    {/*    <View className="gap-1  flex-1 w-full">*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-2')}</Text>*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-light">{t('h-22')}</Text>*/}
+                    {/*    </View>*/}
+                    {/*</View>*/}
+                    {/*<View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">*/}
+                    {/*    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>*/}
+                    {/*    <View className="gap-1  flex-1 w-full">*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-3')}</Text>*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-light">{t('h-33')}</Text>*/}
+                    {/*    </View>*/}
+                    {/*</View>*/}
+                    {/*<View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">*/}
+                    {/*    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>*/}
+                    {/*    <View className="gap-1  flex-1 w-full">*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-extrabold">{t('h-4')}</Text>*/}
+                    {/*    <Text className="flex-shrink text-[18.4px] font-light">{t('h-44')}</Text>*/}
+                    {/*    </View>*/}
+                    {/*</View>*/}
+                    {/*<View className="flex-row items-center w-full  mb-4 h-[110px] px-3 gap-4 bg-primary rounded-3xl">*/}
+                    {/*    <Image resizeMode="contain" source={require('../../assets/images/check.png')} style={{width: 23, height: 26}}/>*/}
+                    {/*    <View className="gap-1  flex-1 w-full">*/}
+                    {/*    <Text  className="flex-shrink text-[18.4px] font-extrabold">{t('h-5')}</Text>*/}
+                    {/*    <Text  className="flex-shrink text-[18.4px] font-light">{t('h-55')}</Text>*/}
+                    {/*    </View>*/}
+                    {/*</View>*/}
                     {/*<View className="flex-row gap-2">*/}
                     {/*    <Checkbox  value={isChecked} onValueChange={setChecked} />*/}
                     {/*    <Text>{t('agree')}</Text>*/}
                     {/*</View>*/}
-
+                    <View className="mt-3">
+                        <Text className="text-[#ABABAC] font-bold">Don't lose your money!</Text>
+                    </View>
                     <TouchableOpacity
                         className="flex items-center justify-center w-full p-3 my-4 bg-buttonBlue rounded-2xl"
                         onPress={()=> router.push('/checkARC')}

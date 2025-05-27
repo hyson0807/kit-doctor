@@ -7,10 +7,11 @@ import {t} from "i18next";
 import Animated from 'react-native-reanimated';
 import YearEven from "@/components/YearEven";
 import YearOdd from "@/components/YearOdd";
+import {useUserInfo} from "@/stores/userInfo";
 
 const MyBenefit = () => {
+    const { name, email, year } = useUserInfo();
 
-    const { year } = useLocalSearchParams<{ year : string }>();
     const selectedYear = parseInt(year, 10);
 
     const [loading, setLoading] = useState(true);

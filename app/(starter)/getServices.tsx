@@ -2,10 +2,11 @@ import {View, Text, ActivityIndicator, Image, TouchableOpacity, ScrollView, Plat
 import React, {useState, useRef} from 'react'
 import BackBar from "@/components/BackBar";
 import {router, useLocalSearchParams} from "expo-router";
-import {useQuery} from "convex/react";
+import {useMutation, useQuery} from "convex/react";
 import {api} from "@/convex/_generated/api";
 import {Id} from "@/convex/_generated/dataModel";
 import {t} from "i18next";
+import {useUserInfo} from "@/stores/userInfo";
 
 const GetServices = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -16,6 +17,9 @@ const GetServices = () => {
     const scrollRef = useRef<ScrollView>(null);
 
     function Check() {
+        const createUser = useMutation(api.users.createUser);
+        const { year, name, email } = useUserInfo();
+
         return(
             <View className="absolute top-0 left-0 w-full h-full bg-black/40 items-center justify-center z-50">
                 <View className="bg-white p-6 rounded-2xl w-[85%] items-center gap-4">
@@ -31,9 +35,27 @@ const GetServices = () => {
                         </TouchableOpacity>
                         <TouchableOpacity
                             className="bg-buttonBlue rounded-xl px-4 py-2"
-                            onPress={() => {
+                            onPress={async () => {
                                 setIsModalVisible(false);
-                                router.push('/last');
+
+                                try {
+                                    if (!year || !name || !email) {
+                                        alert("유저 정보가 누락되었습니다.");
+                                        return;
+                                    }
+
+                                    await createUser({
+                                        year,
+                                        name,
+                                        email,
+                                        hospitalId: hospital_id as Id<"hospitals">,
+                                    });
+
+                                    router.push('/last');
+                                } catch (err) {
+                                    console.error(err);
+                                    alert("저장 중 오류가 발생했습니다.");
+                                }
                             }}
                         >
                             <Text className="text-white">{t('Yes')}</Text>

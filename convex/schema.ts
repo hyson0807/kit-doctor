@@ -17,5 +17,14 @@ export default defineSchema({
     emails: defineTable({
         number: v.string(),
     }),
+
+    users1: defineTable({
+        year: v.string(),
+        name: v.string(),
+        email: v.string(),
+        hospitalId: v.id("hospitals"),
+        createdAt: v.number(),
+    })
+
 });
 

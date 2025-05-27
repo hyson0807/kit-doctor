@@ -3,19 +3,24 @@ import React, {useState} from 'react'
 import {router, useLocalSearchParams} from "expo-router";
 import BackBar from "@/components/BackBar";
 import {t} from "i18next";
-import {setName} from "@expo/config-plugins/build/ios/Name";
+import { useUserInfo } from '@/stores/userInfo';
 
 const Info = () => {
+    const { setName, setEmail, setYear } = useUserInfo();
 
-    const { year } = useLocalSearchParams<{ year : string }>();
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
+    const { year: routeYear } = useLocalSearchParams<{ year : string }>();
+    const [name, setNameInput] = useState('');
+    const [email, setEmailInput] = useState('');
 
     function check() {
-        if(year.length === 4 && name.trim() !== "" && email.trim() !== "") {
+        if(routeYear.length === 4 && name.trim() !== "" && email.trim() !== "") {
+            // 전역 상태로 저장
+            setYear(routeYear);
+            setName(name);
+            setEmail(email);
+
             router.push({
                 pathname: '/myBenefit',
-                params: { year: year.toString() }
             })
         } else {
             alert("please fill all the fields!");
@@ -32,13 +37,13 @@ const Info = () => {
                     <TextInput
                     className="bg-white w-[241px] h-[44px] rounded-2xl p-2"
                     value={name}
-                    onChangeText={setName}
+                    onChangeText={setNameInput}
                     placeholder="Name"
                     />
                     <TextInput
                     className="bg-white w-[241px] h-[44px] rounded-2xl p-2"
                     value={email}
-                    onChangeText={setEmail}
+                    onChangeText={setEmailInput}
                     placeholder="Email"
                     />
                 </View>

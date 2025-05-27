@@ -54,8 +54,7 @@ const CheckArc = () => {
     }
     function Info() {
         const [year, setYear] = useState('');
-        // const [name, setName] = useState('');
-        // const [email, setEmail] = useState('');
+
 
         function check() {
             if(year.length === 4) {

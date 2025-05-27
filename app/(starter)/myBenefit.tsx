@@ -1,12 +1,8 @@
-import {View, Text, ScrollView, TouchableOpacity, Image, ActivityIndicator, Dimensions} from 'react-native'
+import {View, Text, ScrollView, Image, ActivityIndicator, } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import BackBar from "@/components/BackBar";
-import {router} from "expo-router";
-import { useLocalSearchParams } from 'expo-router';
 import {t} from "i18next";
-import Animated from 'react-native-reanimated';
 import YearEven from "@/components/YearEven";
-import YearOdd from "@/components/YearOdd";
 import {useUserInfo} from "@/stores/userInfo";
 
 const MyBenefit = () => {
@@ -22,7 +18,7 @@ const MyBenefit = () => {
     }, []);
 
 
-    const BenefitPrice = year && parseInt(year) % 2 === 0 ? 285000 : 250000;
+    const BenefitPrice = year && parseInt(year) % 2 === 0 ? 250000 : 285000;
 
     return (
         <ScrollView>
@@ -48,7 +44,7 @@ const MyBenefit = () => {
                     selectedYear % 2 === 0 ? (
                         <YearEven/>
                     ) : (
-                        <YearOdd/>
+                        <YearEven/>
                     )
                 )}
 

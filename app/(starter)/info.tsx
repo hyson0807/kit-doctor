@@ -16,7 +16,7 @@ const Info = () => {
     const [checked, setChecked] = React.useState(false);
 
     function check() {
-        if(routeYear.length === 4 && name.trim() !== "" && email.trim() !== "") {
+        if(routeYear.length === 4 && name.trim() !== "" && email.trim() !== "" && checked) {
             // 전역 상태로 저장
             setYear(routeYear);
             setName(name);
@@ -55,11 +55,11 @@ const Info = () => {
 
                 <View className="flex items-center justify-center absolute bottom-0">
                     <View className="flex-row items-center justify-center gap-2">
-                    <Checkbox
-                        status={checked ? 'checked' : 'unchecked'}
-                        onPress={() => setChecked(!checked)}
-                        color="gray"
-                    />
+                            <Checkbox
+                                status={checked ? 'checked' : 'unchecked'}
+                                onPress={() => setChecked(!checked)}
+                                color="#1682F9"
+                            />
                         <Text>서비스 약관 및 개인정보 처리방침 동의</Text>
                     </View>
                     <TouchableOpacity className=" flex items-center justify-center w-full p-4 mb-4  bg-buttonBlue rounded-2xl" onPress={check}>

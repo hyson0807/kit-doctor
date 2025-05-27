@@ -36,8 +36,7 @@ const Info = () => {
             <View className="flex-1 flex-col items-center w-full sm:w-[640px] bg-background p-4">
                 <BackBar/>
                 <View className="flex w-full items-center justify-center p-8 rounded-3xl gap-4 bg-primary">
-                    <Text className="text-3xl text-center flex-shrink font-extrabold gap-4 ">To confirm Benefits,
-                        Essential information!</Text>
+                    <Text className="text-3xl text-center flex-shrink font-extrabold gap-4 ">{t('To confirm Benefits, Essential information!')}</Text>
                     <TextInput
                     className="bg-white w-[241px] h-[44px] rounded-2xl p-2"
                     value={name}
@@ -60,7 +59,7 @@ const Info = () => {
                                 onPress={() => setChecked(!checked)}
                                 color="#1682F9"
                             />
-                        <Text>서비스 약관 및 개인정보 처리방침 동의</Text>
+                        <Text>{t('Agree to Terms of Service and Privacy Policy')}</Text>
                     </View>
                     <TouchableOpacity className=" flex items-center justify-center w-full p-4 mb-4  bg-buttonBlue rounded-2xl" onPress={check}>
                         <Text className="text-white text-[20.7px] font-bold text-center">{t('check my benefit')}</Text>

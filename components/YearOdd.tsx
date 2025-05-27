@@ -48,7 +48,7 @@ const YearOdd = () => {
 
             <View className="flex items-center justify-center w-full my-3">
                 <Text className="text-center flex-shrink font-bold">
-                    Feel too hassle?{'\n'}We will do everything for you directly!
+                    {t('Feel too hassle? We will do everything for you directly!')}
                 </Text>
             </View>
 
@@ -67,7 +67,7 @@ const YearOdd = () => {
 function Right() {
     return (
         <View className="flex-1 items-center bg-white w-[90%] my-3 rounded-3xl ">
-                <View className="flex items-center justify-center pt-5 p-2">
+                <View className="flex items-center justify-center pt-5 p-2 h-20">
                     <Text className="text-[18px] font-bold">{t('Free')}</Text>
                     <Text className="text-[18px] font-bold text-center">{t('Health check-up winner!')}</Text>
                 </View>
@@ -75,7 +75,7 @@ function Right() {
                     <Image  resizeMode="contain" source={require('../assets/images/scope.png')} style={{width: 83, height: 63}}/>
                 </View>
 
-                <View className="flex-1 justify-center p-3 gap-7">
+                <View className="flex-1 w-full p-3 gap-7">
                     <View className="flex-row items-center w-full  gap-3">
                         <Image resizeMode="contain" source={require('../assets/images/check2.png')} style={{width: 18, height: 14}}/>
                         <Text className=" flex flex-shrink font-semibold text-[14px]">{t('You are free winner')}</Text>
@@ -100,7 +100,7 @@ function Right() {
 function Left() {
     return (
         <View className="flex-1 w-[90%] items-center rounded-3xl bg-white my-3 ">
-            <View className="flex items-center justify-center pt-5 p-2">
+            <View className="flex items-center justify-center pt-5 p-2 h-20">
                 <Text className="text-[18px] font-bold">{t('80% off')}</Text>
                 <Text className="text-[18px] font-bold text-center">{t('Dental scaling winner!')}</Text>
             </View>

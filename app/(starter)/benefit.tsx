@@ -27,11 +27,7 @@ const Benefit = () => {
                 <View className="flex-1 flex-col items-center w-full sm:w-[640px] bg-background p-4">
                     <BackBar/>
                     <View className="flex-1 w-full p-4">
-                        <View className="flex-row">
-                            <Text className="text-[40px] font-bold">최대 </Text>
-                            <Text className="text-[40px] font-extrabold">₩285,000</Text>
-                        </View>
-                        <Text className="text-[40px] font-bold">돌려받을 수 있는 혜택{'\n'}찾았어요!</Text>
+                        <Text className="text-[40px] font-bold">{t('MAX ₩285,000 You can use!')}</Text>
                     </View>
                     <TouchableOpacity className=" flex items-center justify-center w-[80%] mt-8 p-4 my-4  bg-buttonBlue rounded-2xl" onPress={() =>{
                         router.push({

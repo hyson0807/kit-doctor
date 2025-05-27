@@ -4,6 +4,7 @@ import BackBar from "@/components/BackBar";
 import {t} from "i18next";
 import YearEven from "@/components/YearEven";
 import {useUserInfo} from "@/stores/userInfo";
+import YearOdd from "@/components/YearOdd";
 
 const MyBenefit = () => {
     const { name, email, year } = useUserInfo();
@@ -27,11 +28,11 @@ const MyBenefit = () => {
                 <BackBar/>
                 <View className="flex justify-center w-full pt-5 p-4 mb-4 ">
                     <Image  className="absolute right-0 top-0" resizeMode="contain" source={require('../../assets/images/firework.png')} style={{width: 44, height: 46}}/>
-                    <Text className="text-[29px] font-bold">당신이 이미 낸 돈으로{'\n'}받을 수 있는 혜택이에요!</Text>
+                    <Text className="text-[29px] font-bold">{t('This is benefits for money you\'ve already paid')}</Text>
                 </View>
                 <View className="bg-primary w-full h-[29px] rounded-2xl"/>
                 <View className="flex justify-center w-full p-4">
-                    <Text className="font-bold text-xl">지금 놓치면, 이 돈은 사라집니다</Text>
+                    <Text className="font-bold text-xl">{t('Miss now, this money disappear')}</Text>
                     <Text className="font-bold text-[32px]">₩{Number(BenefitPrice).toLocaleString()}</Text>
                 </View>
 
@@ -44,7 +45,7 @@ const MyBenefit = () => {
                     selectedYear % 2 === 0 ? (
                         <YearEven/>
                     ) : (
-                        <YearEven/>
+                        <YearOdd/>
                     )
                 )}
 

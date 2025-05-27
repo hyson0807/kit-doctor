@@ -24,7 +24,7 @@ const GetServices = () => {
             <View className="absolute top-0 left-0 w-full h-full bg-black/40 items-center justify-center z-50">
                 <View className="bg-white p-6 rounded-2xl w-[85%] items-center gap-4">
                     <Text className="text-lg font-bold text-center">
-                        {t("₩500 will be charged. Would you like to proceed?")}
+                        {t("₩500 will be charged for deposit")}
                     </Text>
                     <View className="flex-row gap-4 mt-4">
                         <TouchableOpacity
@@ -77,33 +77,20 @@ const GetServices = () => {
                 <BackBar />
 
                 <View className="flex items-center w-[90%] p-2 gap-5">
-                    {/*<View className="flex w-full items-center bg-primary gap-2 p-6 rounded-3xl">*/}
-                    {/*    <Text className="text-[25px] font-bold flex-shrink text-center">{t('Insurance Benefits You almost missed')}</Text>*/}
-                    {/*    {!hospital || hospital.price === undefined || hospital.type === undefined ? (*/}
-                    {/*        <ActivityIndicator size="large" color="#3B82F6" />*/}
-                    {/*    ) : (*/}
-                    {/*        <Text className="text-[40px] font-bold">*/}
-                    {/*            ₩*/}
-                    {/*            {Number(*/}
-                    {/*                (hospital.type === "병원" ? 200000 : 100000) - parseInt(hospital.price)*/}
-                    {/*            ).toLocaleString()}*/}
-                    {/*        </Text>*/}
-                    {/*    )}*/}
 
-                    {/*</View>*/}
                     <View className="flex w-full  gap-2 pl-2 pt-2 rounded-3xl">
-                        <Text className="text-[29px] font-bold">Heading clinic is still Nervous, Lazy!</Text>
+                        <Text className="text-[29px] font-bold">{t('Heading clinic is still Nervous, Lazy!')}</Text>
                     </View>
 
                     <View className="flex w-full  gap-2 pl-2 pt-2 rounded-3xl">
-                        <Text className="text-[24px] font-bold">We will do everything</Text>
-                        <Text className="text-[18px] font-bold">Don’t lose your money already paid!</Text>
+                        <Text className="text-[24px] font-bold">{t('We will do everything')}</Text>
+                        <Text className="text-[18px] font-bold">{t('Don’t lose your money already paid!')}</Text>
                     </View>
                     <View className="bg-primary flex items-center w-full  gap-8 p-8 rounded-3xl">
 
                         <View className="w-full">
                             <Text className="text-[23px] font-bold text-[#729FE8]">{t('All this, just 500 KRW')}</Text>
-                            <Text className="text-[18px] font-bold text-[#729FE8]">Pay once, Get everything</Text>
+                            <Text className="text-[18px] font-bold text-[#729FE8]">{t('Pay once, Get everything')}</Text>
                         </View>
                         <View className="flex-row w-full gap-4 items-center">
                             <Image resizeMode="contain" source={require('../../assets/images/money.png')} style={{width: 29, height: 29}}/>

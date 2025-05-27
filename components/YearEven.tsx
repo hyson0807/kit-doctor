@@ -46,7 +46,7 @@ const YearEven = () => {
                 </TouchableOpacity>
             </View>
             <View className="flex items-center justify-center w-full my-3">
-                <Text className="text-center flex-shrink font-bold">Feel too hassle?{'\n'}We will do everything for you  directly!</Text>
+                <Text className="text-center flex-shrink font-bold">{t('Feel too hassle? We will do everything for you directly!')}</Text>
             </View>
 
             <TouchableOpacity
@@ -63,22 +63,21 @@ const YearEven = () => {
 function Right() {
     return (
         <View className="flex-1 items-center bg-white w-[90%] my-3 rounded-3xl ">
-            <View className="flex items-center justify-center pt-5 p-2">
-                <Text className="text-[18px] font-bold">70% off</Text>
-                <Text className="text-[18px] font-bold text-center">hospital use</Text>
+            <View className="flex items-center justify-center pt-5 p-2 h-20 ">
+                <Text className="text-[18px] font-bold text-center">{t('70% off hospital use')}</Text>
             </View>
             <View className="flex items-center">
                 <Image  resizeMode="contain" source={require('../assets/images/scope.png')} style={{width: 83, height: 63}}/>
             </View>
 
-            <View className="flex-1 justify-center p-3 gap-7 ">
-                <View className="flex-row items-center w-full  gap-3">
+            <View className="flex-1 w-full p-3 gap-7  ">
+                <View className="flex-row items-center w-full  gap-3 ">
                     <Image resizeMode="contain" source={require('../assets/images/check2.png')} style={{width: 18, height: 14}}/>
-                    <Text className=" flex flex-shrink font-semibold text-[14px]">Muscle{'\n'}shoulder pain</Text>
+                    <Text className=" flex flex-shrink font-semibold text-[14px]">{t('Muscle shoulder pain')}</Text>
                 </View>
                 <View className="flex-row items-center w-full  gap-3">
                     <Image resizeMode="contain" source={require('../assets/images/check2.png')} style={{width: 18, height: 14}}/>
-                    <Text className=" flex flex-shrink font-semibold text-[14px]">Cold & Stomachache</Text>
+                    <Text className=" flex flex-shrink font-semibold text-[14px]">{t('Cold & Stomachache')}</Text>
                 </View>
                 <View className="flex-row items-center w-full  gap-3">
                     <Image resizeMode="contain" source={require('../assets/images/check2.png')} style={{width: 18, height: 14}}/>
@@ -93,15 +92,15 @@ function Right() {
 function Left() {
     return (
         <View className="flex-1 w-[90%] items-center rounded-3xl bg-white my-3 ">
-            <View className="flex items-center justify-center pt-5 p-2">
-                <Text className="text-[18px] font-bold">{t('80% off')}</Text>
+            <View className="flex items-center justify-center pt-5 p-2 h-20 ">
+                <Text className="text-[18px] font-bold text-center">{t('80% off')}</Text>
                 <Text className="text-[18px] font-bold text-center">{t('Dental scaling winner!')}</Text>
             </View>
             <View className="flex items-center">
                 <Image  resizeMode="contain" source={require('../assets/images/bigTeeth.png')} style={{width: 83, height: 63}}/>
             </View>
 
-            <View className="flex-1 justify-center p-3 gap-7">
+            <View className="flex-1 justify-center p-3 gap-7 ">
                 <View className="flex-row items-center w-full  gap-3 ">
                     <Image resizeMode="contain" source={require('../assets/images/check2.png')} style={{width: 18, height: 14}}/>
                     <Text className=" flex flex-shrink font-semibold text-[14px]">{t('Dental care & Tooth cleaned')}</Text>

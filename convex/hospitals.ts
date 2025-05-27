@@ -5,12 +5,18 @@ export const getHospitals = query({
     args: { type: v.string() },
 
     handler: async (ctx, args) => {
-        const hospitals = await ctx.db
-            .query("hospitals")
-            .withIndex("type", (q) => q.eq("type", args.type))
-            .collect();
-
-        return hospitals;
+        if (args.type === '둘다') {
+            return await ctx.db.query("hospitals")
+                .filter(q => q.or(
+                    q.eq(q.field("type"), "치과"),
+                    q.eq(q.field("type"), "병원")
+                ))
+                .collect();
+        } else {
+            return await ctx.db.query("hospitals")
+                .filter(q => q.eq(q.field("type"), args.type))
+                .collect();
+        }
 
     }
 })

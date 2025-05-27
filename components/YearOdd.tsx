@@ -1,18 +1,49 @@
 import {View, Text, TouchableOpacity, Image} from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import {router} from "expo-router";
 import {t} from "i18next";
 
 const YearOdd = () => {
+    const [leftSelected, setLeftSelected] = useState(false);
+    const [rightSelected, setRightSelected] = useState(false);
+
+    const getSelectedType = () => {
+        if (leftSelected && !rightSelected) return '치과';
+        if (!leftSelected && rightSelected) return '병원';
+        if (leftSelected && rightSelected) return '둘다'; // 필요시 처리 가능
+        return null;
+    };
+
+
+    const handlePress = () => {
+        const type = getSelectedType();
+
+        if (!type) {
+            window.alert('하나 이상 선택해주세요.');
+            return;
+        }
+        else {
+            router.push({
+                pathname: '/hospital',
+                params: { type },
+            });
+        }
+
+    };
+
     return (
         <View className="flex items-center w-full ">
             <View className="flex flex-row items-center justify-center w-full gap-2 ">
-                <View className="flex-1 items-center h-full  rounded-3xl bg-primary">
-                    <Left/>
-                </View>
-                <View className="flex-1 items-center h-full  rounded-3xl bg-primary ">
-                    <Right/>
-                </View>
+                <TouchableOpacity className="flex-1 h-full" onPress={() => setLeftSelected(prev => !prev)}>
+                    <View className={`flex-1 items-center h-full rounded-3xl ${leftSelected ? 'bg-blue-500' : 'bg-primary'}`}>
+                        <Left />
+                    </View>
+                </TouchableOpacity>
+                <TouchableOpacity className="flex-1 h-full" onPress={() => setRightSelected(prev => !prev)}>
+                    <View className={`flex-1 items-center h-full rounded-3xl ${rightSelected ? 'bg-blue-500' : 'bg-primary'}`}>
+                        <Right />
+                    </View>
+                </TouchableOpacity>
             </View>
             <View className="flex items-center justify-center w-full my-3">
                 <Text className="text-center flex-shrink font-medium">Feel too hassle?{'\n'}We will do everything for you  directly!</Text>
@@ -20,13 +51,10 @@ const YearOdd = () => {
 
             <TouchableOpacity
                 className=" flex items-center justify-center pl-[5%] gap-5 w-full px-3 py-5  bg-buttonBlue rounded-3xl"
-                onPress={()=> router.push({
-                    pathname: "/hospital",
-                    params: { type: "치과" }
-                })}
+                onPress={handlePress}
             >
                 {/*<Image className="absolute left-7" resizeMode="contain" source={require('../../assets/images/teeth.png')} style={{width: 25, height: 25}}/>*/}
-                <Text className="text-white text-[20.7px] font-bold flex-shrink text-center ">{t('Recommend a Dentist')}</Text>
+                <Text className="text-white text-[20.7px] font-bold flex-shrink text-center ">Get ONE Click help</Text>
             </TouchableOpacity>
         </View>
     )

@@ -20,7 +20,6 @@ const Info = () => {
         } else {
             alert("please fill all the fields!");
         }
-
     }
 
     return (

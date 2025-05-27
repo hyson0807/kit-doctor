@@ -47,7 +47,7 @@ const YearEven = () => {
             </View>
 
             <View className="flex items-center justify-center w-full my-3">
-                <Text className="text-center flex-shrink font-medium">
+                <Text className="text-center flex-shrink font-bold">
                     Feel too hassle?{'\n'}We will do everything for you directly!
                 </Text>
             </View>

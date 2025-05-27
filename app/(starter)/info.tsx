@@ -4,6 +4,7 @@ import {router, useLocalSearchParams} from "expo-router";
 import BackBar from "@/components/BackBar";
 import {t} from "i18next";
 import { useUserInfo } from '@/stores/userInfo';
+import { Checkbox } from 'react-native-paper';
 
 const Info = () => {
     const { setName, setEmail, setYear } = useUserInfo();
@@ -11,6 +12,8 @@ const Info = () => {
     const { year: routeYear } = useLocalSearchParams<{ year : string }>();
     const [name, setNameInput] = useState('');
     const [email, setEmailInput] = useState('');
+
+    const [checked, setChecked] = React.useState(false);
 
     function check() {
         if(routeYear.length === 4 && name.trim() !== "" && email.trim() !== "") {
@@ -28,6 +31,7 @@ const Info = () => {
     }
 
     return (
+
         <View className="flex-1 items-center">
             <View className="flex-1 flex-col items-center w-full sm:w-[640px] bg-background p-4">
                 <BackBar/>
@@ -47,9 +51,21 @@ const Info = () => {
                     placeholder="Email"
                     />
                 </View>
-                <TouchableOpacity className="absolute bottom-0 flex items-center justify-center w-[80%] mt-8 p-4 my-4  bg-buttonBlue rounded-2xl" onPress={check}>
-                    <Text className="text-white text-[20.7px] font-bold text-center">{t('check my benefit')}</Text>
-                </TouchableOpacity>
+
+
+                <View className="flex items-center justify-center absolute bottom-0">
+                    <View className="flex-row items-center justify-center gap-2">
+                    <Checkbox
+                        status={checked ? 'checked' : 'unchecked'}
+                        onPress={() => setChecked(!checked)}
+                        color="gray"
+                    />
+                        <Text>서비스 약관 및 개인정보 처리방침 동의</Text>
+                    </View>
+                    <TouchableOpacity className=" flex items-center justify-center w-full p-4 mb-4  bg-buttonBlue rounded-2xl" onPress={check}>
+                        <Text className="text-white text-[20.7px] font-bold text-center">{t('check my benefit')}</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
 
         </View>

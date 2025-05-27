@@ -26,17 +26,19 @@ const GetServices = () => {
             <View className="flex flex-col items-center w-full h-full sm:w-[640px] p-4">
                 <BackBar />
                 <View className="flex-1 w-full h-full m-5 gap-8">
-                    <TouchableOpacity
-                        className="flex items-center justify-center w-full h-[132px] bg-primary rounded-2xl p-1"
-                        onPress={handleCopy}
-                    >
-                        <Text className="font-bold text-2xl text-center">
-                            {accountNumber}
-                        </Text>
-                    </TouchableOpacity>
-                    <View className="flex-1 items-center justify-center w-full h-[132px] gap-10 bg-primary rounded-2xl">
-                        <Text className="text-2xl text-center font-bold">{t('If you fill out the survey,')}</Text>
-                        <Text className="text-2xl text-center font-bold">{t('We\'ll use your insurance')}</Text>
+                    {/*<TouchableOpacity*/}
+                    {/*    className="flex items-center justify-center w-full h-[132px] bg-primary rounded-2xl p-1"*/}
+                    {/*    onPress={handleCopy}*/}
+                    {/*>*/}
+                    {/*    <Text className="font-bold text-2xl text-center">*/}
+                    {/*        {accountNumber}*/}
+                    {/*    </Text>*/}
+                    {/*</TouchableOpacity>*/}
+                    <View className="flex-1 items-center justify-center w-full h-[132px] gap-10 bg-primary rounded-2xl p-2">
+                        <Text className="text-[24px] text-center font-bold">Thanks for using it</Text>
+                        <Text className="text-[24px] text-center font-bold">Tell me what you chose</Text>
+                        <Text className="text-xl text-center font-semibold">( Dental care, Free check-up{'\n'}70% OFF Hospital Use )</Text>
+                        <Text className="text-[24px] text-center font-bold">By your insurance{'\n'}already paid,{'\n'}we will help to use{'\n'}this medical service!</Text>
                     </View>
                 </View>
             </View>

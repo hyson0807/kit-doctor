@@ -36,7 +36,7 @@ const MyBenefit = () => {
                 <View className="bg-primary w-full h-[29px] rounded-2xl"/>
                 <View className="flex justify-center w-full p-4">
                     <Text className="font-bold text-xl">지금 놓치면, 이 돈은 사라집니다</Text>
-                    <Text className="font-bold text-xl">₩{Number(BenefitPrice).toLocaleString()}</Text>
+                    <Text className="font-bold text-[32px]">₩{Number(BenefitPrice).toLocaleString()}</Text>
                 </View>
 
                 {loading ? (
